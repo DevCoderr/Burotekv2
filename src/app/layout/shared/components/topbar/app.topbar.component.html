@@ -1,29 +1,47 @@
-<div class="layout-topbar">
-    <a class="layout-topbar-logo" routerLink="">
-        <img src="assets/layout/images/{{layoutService.config.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="logo">
-        <span>SAKAI</span>
-    </a>
+<div class="layout-topbar ">
 
-    <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
-        <i class="pi pi-bars"></i>
-    </button>
+    <a href="https://www.ardgrup.com.tr/" target="_blank"> <img src="../../../../../assets/layout/images/ardgrup.png"  alt="#" style="width: 35%;"></a>
+    <div class="col-md-8" style="margin-left:200px;  text-align: center; ">
+
+    <a href="https://uhap.com.tr//#/kullanici/giris/" target="_blank"> <img src="../../../../../assets/layout/images/uhap.png"  alt="#" style="width: 16%;"></a>
+    &nbsp;
+    <a href="https://www.icratek.com.tr/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/icratek.png" alt="#" style="width: 16%;"></a>
+    &nbsp;
+    <a href="https://www.karartek.com.tr/#/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/karartek.png" alt="#" style="width: 16%;"></a>
+    &nbsp;
+    <a href="https://ocas.com.tr/#/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/ocas.png" alt="#" style=" width: 16%;"></a>
+    &nbsp;
+    <a href="https://makbuztek.com.tr/#/login?a=q9Jqmg3XWHqEz037hjapyl1Bx0Dj7Slo8nsDmuBmVys%3D" target="_blank"><img src="../../../../../assets/layout/images/makbuztek.jpeg" alt="#" style=" width: 16%;"></a>
+    </div>
 
     <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="layoutService.showProfileSidebar()">
         <i class="pi pi-ellipsis-v"></i>
     </button>
 
     <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
-        <button class="p-link layout-topbar-button">
-            <i class="pi pi-calendar"></i>
-            <span>Calendar</span>
-        </button>
-        <button class="p-link layout-topbar-button">
-            <i class="pi pi-user"></i>
-            <span>Profile</span>
-        </button>
-        <button class="p-link layout-topbar-button" routerLink="/documentation">
-            <i class="pi pi-cog"></i>
-            <span>Settings</span>
-        </button>
+        <div>
+            <button class="p-link "  routerLink="hakkimizda">
+                <span>Hakkımızda</span>
+            </button>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <div>
+            <button class="p-link " routerLink="basvuru-giris">
+                <span>Başvuru</span>
+            </button>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <div>
+            <button class="p-link " routerLink="login">
+                <span>Kullanıcı Girişi</span>
+            </button>
+        </div>
+
     </div>
 </div>

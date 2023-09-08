@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { AppLayoutComponent } from "./app.layout.component";
 import { SharedModule } from './shared/modules/shared.module';
+import { PublicModule } from './public/public.module';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { SharedModule } from './shared/modules/shared.module';
         HttpClientModule,
         BrowserAnimationsModule,
         RouterModule,
-        SharedModule
+        SharedModule,
+        PublicModule
     ],
     exports: [AppLayoutComponent]
 })

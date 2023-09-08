@@ -1,0 +1,29 @@
+<div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden " style="background-image: url(../../../../../assets/layout/images/burotek0.jpg); background-position: 100% 100%; min-height: 94px; margin: 0px; width: auto; ">
+    <div class="flex flex-column align-items-center justify-content-center">
+        <img src="../../../../../assets/layout/images/buroteklogin.png" alt="Sakai logo" class="mb-10 w-20rem flex-shrink-0">
+        <div style="border-radius:56px; padding:0.3rem; background: linear-gradient(180deg, var(--primary-color) 20%, rgba(33, 150, 243, 0) 40%);">
+            <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius:53px">
+                <div class="text-center mb-5">
+                    <div class="text-900 text-3xl font-medium mb-3">Kullanıcı Giriş</div>
+                </div>
+
+                <div>
+                    <label for="email1" class="block text-900 text-xl font-medium mb-2">TC Kimlik No</label>
+                    <input id="email1" type="text" placeholder="TC Kimlik No" pInputText class="w-full p-3 md:w-30rem mb-5" style="padding:1rem">
+
+                    <label for="password1" class="block text-900 text-xl font-medium  mb-2">Şifre</label>
+                    <p-password id="password1" [(ngModel)]="password" placeholder="Şifre" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem"></p-password>
+
+                    <div class="flex align-items-center justify-content-between mb-5 gap-5">
+                        <div class="flex align-items-center">
+                            <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
+                            <label for="rememberme1">Beni Hatırla</label>
+                        </div>
+                        <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Şifremi Unuttum?</a>
+                    </div>
+                    <button pButton pRipple label="Giriş Yap" class="w-full p-3 text-xl" [routerLink]="['/']"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

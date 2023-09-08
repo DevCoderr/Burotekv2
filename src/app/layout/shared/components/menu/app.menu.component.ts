@@ -14,153 +14,298 @@ export class AppMenuComponent implements OnInit {
     constructor(public layoutService: LayoutService) { }
 
     ngOnInit() {
-        this.model = [
+        this.model =
+        [
+
             {
-                label: 'Home',
+
                 items: [
-                    { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
+                    { label: 'Ana Sayfa', icon: 'pi pi-fw pi-home', routerLink: ['/giris-sayfasi'] }
                 ]
             },
             {
-                label: 'UI Components',
+
                 items: [
-                    { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
-                    { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input'] },
-                    { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/floatlabel'] },
-                    { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', routerLink: ['/uikit/invalidstate'] },
-                    { label: 'Button', icon: 'pi pi-fw pi-box', routerLink: ['/uikit/button'] },
-                    { label: 'Table', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table'] },
-                    { label: 'List', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
-                    { label: 'Tree', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
-                    { label: 'Panel', icon: 'pi pi-fw pi-tablet', routerLink: ['/uikit/panel'] },
-                    { label: 'Overlay', icon: 'pi pi-fw pi-clone', routerLink: ['/uikit/overlay'] },
-                    { label: 'Media', icon: 'pi pi-fw pi-image', routerLink: ['/uikit/media'] },
-                    { label: 'Menu', icon: 'pi pi-fw pi-bars', routerLink: ['/uikit/menu'], routerLinkActiveOptions: { paths: 'subset', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' } },
-                    { label: 'Message', icon: 'pi pi-fw pi-comment', routerLink: ['/uikit/message'] },
-                    { label: 'File', icon: 'pi pi-fw pi-file', routerLink: ['/uikit/file'] },
-                    { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/uikit/charts'] },
-                    { label: 'Misc', icon: 'pi pi-fw pi-circle', routerLink: ['/uikit/misc'] }
+                    { label: 'Yönetim Paneli', icon: 'pi pi-fw pi-id-card' ,
+                    items:[
+                        {
+                            label: 'Kullanıcı İşlemleri',
+                            routerLink: ['/auth/login']
+                        },
+                        {
+                            label: 'Büro Bilgilerim',
+                            routerLink: ['/auth/error']
+                        }
+
+                    ]},
                 ]
             },
-            {
-                label: 'Prime Blocks',
-                items: [
-                    { label: 'Free Blocks', icon: 'pi pi-fw pi-eye', routerLink: ['/blocks'], badge: 'NEW' },
-                    { label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: ['https://www.primefaces.org/primeblocks-ng'], target: '_blank' },
+
+                {
+                    items: [
+                    { label: 'Kişi İşlemleri', icon: 'pi pi-fw pi-user',
+                    items:[
+                        {
+                            label: 'Müvekkiller',
+                            routerLink: ['/auth/login']
+                        },
+                        {
+                            label: 'Karşı Taraf',
+                            routerLink: ['/auth/error']
+                        },
+                        {
+                            label: 'Diğer Kişiler',
+                            routerLink: ['/auth/login']
+                        },
+                        {
+                            label: 'Kişi Listesi',
+                            routerLink: ['/auth/error']
+                        }
+                    ]},
                 ]
             },
-            {
-                label: 'Utilities',
-                items: [
-                    { label: 'PrimeIcons', icon: 'pi pi-fw pi-prime', routerLink: ['/utilities/icons'] },
-                    { label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: ['https://www.primefaces.org/primeflex/'], target: '_blank' },
-                ]
-            },
-            {
-                label: 'Pages',
-                icon: 'pi pi-fw pi-briefcase',
-                items: [
-                    {
-                        label: 'Landing',
-                        icon: 'pi pi-fw pi-globe',
-                        routerLink: ['/landing']
-                    },
-                    {
-                        label: 'Auth',
-                        icon: 'pi pi-fw pi-user',
-                        items: [
+                {
+                    items: [
+                        { label: 'Notlar', icon: 'pi pi-calendar-minus',
+                        items:[
                             {
-                                label: 'Login',
-                                icon: 'pi pi-fw pi-sign-in',
+                                label: 'Not Listesi',
                                 routerLink: ['/auth/login']
                             },
                             {
-                                label: 'Error',
-                                icon: 'pi pi-fw pi-times-circle',
+                                label: 'Yapılacak İşler Listesi',
                                 routerLink: ['/auth/error']
-                            },
-                            {
-                                label: 'Access Denied',
-                                icon: 'pi pi-fw pi-lock',
-                                routerLink: ['/auth/access']
                             }
-                        ]
-                    },
-                    {
-                        label: 'Crud',
-                        icon: 'pi pi-fw pi-pencil',
-                        routerLink: ['/pages/crud']
-                    },
-                    {
-                        label: 'Timeline',
-                        icon: 'pi pi-fw pi-calendar',
-                        routerLink: ['/pages/timeline']
-                    },
-                    {
-                        label: 'Not Found',
-                        icon: 'pi pi-fw pi-exclamation-circle',
-                        routerLink: ['/notfound']
-                    },
-                    {
-                        label: 'Empty',
-                        icon: 'pi pi-fw pi-circle-off',
-                        routerLink: ['/pages/empty']
-                    },
+                        ]},
+                    ]
+                },
+                {
+                    items: [
+                    { label: 'Evrak', icon: 'pi pi-fw pi-file',
+                    items:[
+                        {
+                            label: 'Yeni Evrak',
+                            routerLink: ['/auth/login']
+                        },
+                        {
+                            label: 'Evrak İşlemleri',
+                            routerLink: ['/auth/error']
+                        },
+                        {
+                            label: 'Kurum İşlemleri',
+                            routerLink: ['/auth/login']
+                        },
+                        {
+                            label: 'Belge Türü İşlemleri',
+                            routerLink: ['/auth/error']
+                        }
+                    ]},
                 ]
             },
             {
-                label: 'Hierarchy',
                 items: [
-                    {
-                        label: 'Submenu 1', icon: 'pi pi-fw pi-bookmark',
-                        items: [
-                            {
-                                label: 'Submenu 1.1', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    { label: 'Submenu 1.1.1', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' },
-                                ]
-                            },
-                            {
-                                label: 'Submenu 1.2', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        label: 'Submenu 2', icon: 'pi pi-fw pi-bookmark',
-                        items: [
-                            {
-                                label: 'Submenu 2.1', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                ]
-                            },
-                            {
-                                label: 'Submenu 2.2', icon: 'pi pi-fw pi-bookmark',
-                                items: [
-                                    { label: 'Submenu 2.2.1', icon: 'pi pi-fw pi-bookmark' },
-                                ]
-                            },
-                        ]
-                    }
+                    { label: 'Danışma', icon: 'pi pi-fw pi-users',
+                    items:[
+                        {
+                            label: 'Yeni Danışma',
+                            routerLink: ['/auth/login']
+                        },
+                        {
+                            label: 'Danışma Listesi',
+                            routerLink: ['/auth/error']
+                        }
+                    ]},
                 ]
             },
             {
-                label: 'Get Started',
                 items: [
+                { label: 'Dava', icon: 'pi pi-fw pi-shield',
+                items:[
                     {
-                        label: 'Documentation', icon: 'pi pi-fw pi-question', routerLink: ['/documentation']
+                        label: 'Yeni Dava',
+                        routerLink: ['/auth/login']
                     },
                     {
-                        label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/primefaces/sakai-ng'], target: '_blank'
+                        label: 'Dava Listesi',
+                        routerLink: ['/auth/error']
+                    },
+                    {
+                        label: 'Kurum İşlemleri',
+                        routerLink: ['/auth/login']
+                    },
+                    {
+                        label: 'Duruşma Listesi',
+                        routerLink: ['/auth/error']
                     }
-                ]
+                ]},
+            ]
+        },
+        {
+            items: [
+            { label: 'İcra', icon: 'pi pi-fw pi-slack',
+            items:[
+                {
+                    label: 'Yeni İcra',
+                    routerLink: ['/auth/login']
+                },
+                {
+                    label: 'İcra Listesi',
+                    routerLink: ['/auth/error']
+                },
+                {
+                    label: 'İcra Dairesi İşlemleri',
+                    routerLink: ['/auth/login']
+                }
+            ]},
+        ]
+    },
+    {
+        items: [
+        { label: 'Cari İşlemler', icon: 'pi pi-fw pi-money-bill',
+        items:[
+            {
+                label: 'Yeni Ödeme',
+                routerLink: ['/auth/login']
+            },
+            {
+                label: 'Yeni Tahsilat',
+                routerLink: ['/auth/error']
+            },
+            {
+                label: 'Cari İşlem Geçmişi',
+                routerLink: ['/auth/login']
+            },
+            {
+                label: 'Cariler',
+                routerLink: ['/auth/error']
+            },
+            {
+                label: 'Cari Hesap İşlem Adları',
+                routerLink: ['/auth/error']
             }
-        ];
+        ]},
+    ]
+},
+{
+    items: [
+        { label: 'Arşiv', icon: 'pi pi-fw pi-inbox',
+        items:[
+            {
+                label: 'Arşiv Listesi',
+                routerLink: ['/auth/login']
+            },
+            {
+                label: 'Arşiv Türleri',
+                routerLink: ['/auth/error']
+            }
+        ]},
+    ]
+},
+
+{
+    items: [
+        { label: 'Demirbas', icon: 'pi pi-fw pi-building',
+        items:[
+            {
+                label: 'Demirbas Listesi',
+                routerLink: ['/auth/login']
+            },
+            {
+                label: 'Lokasyon Listesi',
+                routerLink: ['/auth/error']
+            }
+        ]},
+    ]
+},
+
+{
+    items: [
+    { label: 'Kütüphane', icon: 'pi pi-fw pi-sitemap',
+    items:[
+        {
+            label: 'Yayınlar',
+            routerLink: ['/auth/login']
+        },
+        {
+            label: 'Yayın Türleri',
+            routerLink: ['/auth/error']
+        },
+        {
+            label: 'Kütüphane Listesi',
+            routerLink: ['/auth/login']
+        },
+        {
+            label: 'Ödünç Yayınları Listesi',
+            routerLink: ['/auth/error']
+        }
+    ]},
+]
+},
+{
+    items: [
+    { label: 'Araçlar', icon: 'pi pi-fw pi-pencil',
+    items:[
+        {
+            label: 'Dosya Kayıt',
+            routerLink: ['/auth/login']
+        },
+        {
+            label: 'Mevzuat',
+            routerLink: ['/auth/error']
+        },
+        {
+            label: 'Dilekçeler',
+            routerLink: ['/auth/login']
+        },
+        {
+            label: 'Hesaplama Araçları',
+            routerLink: ['/auth/error']
+        },
+        {
+            label: 'Standart Faizler',
+            routerLink: ['/auth/error']
+        },
+        {
+            label: 'Fatura İşlemleri',
+            routerLink: ['/auth/login']
+        },
+        {
+            label: 'Kullanıcı Tercihleri',
+            routerLink: ['/auth/error']
+        }
+    ]},
+]
+},
+
+{
+    items: [
+    { label: 'İletişim', icon: 'pi pi-fw pi-phone',
+    items:[
+        {
+            label: 'İletişim Bilgileri',
+            routerLink: ['/auth/login']
+        },
+        {
+            label: 'Sıkça Sorulan Sorular',
+            routerLink: ['/auth/error']
+        },
+        {
+            label: 'Talepler',
+            routerLink: ['/auth/login']
+        },
+        {
+            label: 'Kullanım Klavuzları',
+            routerLink: ['/auth/error']
+        },
+        {
+            label: 'Yardım Videoları',
+            routerLink: ['/auth/error']
+        }
+    ]},
+]
+},
+
+        ]
     }
 }
+

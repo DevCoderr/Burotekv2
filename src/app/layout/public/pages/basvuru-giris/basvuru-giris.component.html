@@ -1,0 +1,22 @@
+<div class="img min-h-screen min-w-screen">
+    <div class="container">
+      <div class="form-title">
+        <h5 class="title-text">Üye Kayıt</h5>
+        <div class="x"><p>Lütfen Kayıt Formunu Doldurun</p></div>
+      </div>
+      <section class="upper-form">
+        <button class="Header-Button a">
+          <a class="nav-link" [routerLink]="['buro_adimi']"
+            >1 - Büro Bilgileri
+          </a>
+        </button>
+        <button class="Header-Button b">
+          <a class="nav-link">2 - Avukat Bilgileri </a>
+        </button>
+        <button class="Header-Button c">
+          <a class="nav-link">3 - Ödeme Bilgileri </a>
+        </button>
+        <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
