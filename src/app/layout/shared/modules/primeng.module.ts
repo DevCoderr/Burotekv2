@@ -3,17 +3,21 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { SidebarModule } from 'primeng/sidebar';
+import { PasswordModule } from 'primeng/password';
+import { CheckboxModule } from 'primeng/checkbox';
+import { MenuModule } from 'primeng/menu';
 
 
 
 @NgModule({
   declarations: [],
   imports: [
-    BrowserModule,
-    CommonModule,
     ButtonModule,
-    SidebarModule
+    SidebarModule,
+    PasswordModule,
+    CheckboxModule,
+    MenuModule
   ],
-  exports:[ButtonModule,SidebarModule]
+  exports:[ButtonModule,CheckboxModule,SidebarModule,PasswordModule,MenuModule]
 })
 export class PrimengModule { }

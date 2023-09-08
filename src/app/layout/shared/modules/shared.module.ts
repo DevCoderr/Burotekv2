@@ -8,14 +8,15 @@ import { AppMenuComponent } from '../components/menu/app.menu.component';
 import { AppSidebarComponent } from '../components/sidebar/app.sidebar.component';
 import { AppConfigComponent } from '../components/config/app.config.component';
 import { AppFooterComponent } from '../components/footer/app.footer.component';
+import { AppMenuitemComponent } from '../components/menuitem/app.menuitem.component';
 
 
 
 @NgModule({
-  declarations: [AppTopBarComponent,AppMenuComponent,AppSidebarComponent,AppConfigComponent,AppFooterComponent],
+  declarations: [AppTopBarComponent,AppMenuComponent,AppSidebarComponent,AppConfigComponent,AppFooterComponent,AppMenuitemComponent],
   imports: [
     CommonModule,
-    BrowserModule,
+
     PrimengModule
   ],
   exports:[
@@ -23,7 +24,8 @@ import { AppFooterComponent } from '../components/footer/app.footer.component';
     AppMenuComponent,
     AppSidebarComponent,
     AppConfigComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    AppMenuitemComponent
   ]
 })
 export class SharedModule { }
