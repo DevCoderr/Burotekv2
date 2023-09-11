@@ -7,6 +7,7 @@ import { BasvuruGirisComponent } from './pages/basvuru-giris/basvuru-giris.compo
 import { BuroBilgileriComponent } from './pages/basvuru-giris/buro-bilgileri/buro-bilgileri.component';
 import { OdemeBilgileriComponent } from './pages/basvuru-giris/odeme-bilgileri/odeme-bilgileri.component';
 import { AvukatBilgileriComponent } from './pages/basvuru-giris/avukat-bilgileri/avukat-bilgileri.component';
+import { SifremiUnuttumComponent } from './pages/sifremi-unuttum/sifremi-unuttum.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,11 @@ const routes: Routes = [
             {
                 path:'login',
                 component:LoginComponent,
+               
+            },
+            {
+                path:'sifremi-unuttum',
+                component:SifremiUnuttumComponent,
             },
             {
                 path:'hakkimizda',
