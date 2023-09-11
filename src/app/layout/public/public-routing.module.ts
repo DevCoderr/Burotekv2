@@ -30,6 +30,10 @@ const routes: Routes = [
                 component:SifremiUnuttumComponent,
             },
             {
+                path:'sifremi-unuttum',
+                component:SifremiUnuttumComponent,
+            },
+            {
                 path:'hakkimizda',
                 component:HakkimizdaComponent,
             },

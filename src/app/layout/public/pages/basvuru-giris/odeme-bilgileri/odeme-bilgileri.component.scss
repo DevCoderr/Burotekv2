@@ -1,0 +1,123 @@
+/*.btn-primary{
+   padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 0.3s;
+  justify-content: space-between;
+  margin: 5%;
+  padding: 3px 5px;
+  border: 1;
+} */
+.Dropdown-Button {
+    border-radius: 6px;
+    border-color: rgb(213, 213, 213);
+    background-color: rgba(255, 255, 255, 0.822);
+    width: 100%;
+    height: 4vh;
+  }
+
+  .btn-a {
+    color: white;
+    border-radius: 6px;
+    width: 10%;
+    background-color: #1ab394;
+    border-color: #1ab394;
+    font-weight: 100;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    padding: 3px 5px;
+    margin: 1.5%;
+    border: 1;
+  }
+
+  .btn-b {
+    color: white;
+    border-radius: 6px;
+    width: 10%;
+    background-color: #ed5565;
+    border-color: #ed5565;
+    font-weight: 100;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    padding: 3px 5px;
+    border: 1;
+  }
+
+  .btn-c {
+    color: white;
+    border-radius: 6px;
+    width: 14%;
+    background-color: #bababa;
+    border-color: #bababa;
+    font-weight: 100;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    padding: 3px 5px;
+    margin: 1.5%;
+    border: 1;
+    margin-left: 56%;
+  }
+  .button {
+    margin-top: -8%;
+    margin-right: -11.5%;
+  }
+
+    .submit {
+      float: none;
+      margin-top: 10px;
+    }
+
+
+  .form-group {
+    height: 10vh;
+    margin: auto;
+    width: 90%;
+    font-weight: 500;
+    font-size: 90%;
+    border-color: rgb(213, 213, 213);
+  }
+
+  .form-group2 {
+     max-height: 100%;
+  }
+  .btn-primary{
+      margin-left: 10px;
+  }
+  .btn-warning{
+      margin-left: 10px;
+  }
+  .Check-Item label {
+      font-size: 16px;
+      padding: 10px 10px;
+  }
+
+  .form-group{
+      font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+      .form-group1 {
+        margin-bottom: 5px;
+
+      }
+  }
+
+  .form-group1{
+    padding: 0px;
+    margin-left: 57px;
+  }
+
+  .form-group1.Check-Item{
+
+    font-size: 3px;
+
+  }
+
+  .form-group2{
+    padding-left: 57px;
+    margin-top: -5px ;
+  }
