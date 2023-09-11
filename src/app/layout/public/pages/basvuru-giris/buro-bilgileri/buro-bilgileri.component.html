@@ -1,1 +1,116 @@
-<p>buro-bilgileri works!</p>
+<form>
+    <div class="register-form">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Büro Adı </label>
+          <input
+            type="text"
+            formControlName="buroAdi"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f['buroAdi'].errors }"
+          />
+          <div *ngIf="submitted && f['buroAdi'].errors" class="invalid-feedback">
+            <div *ngIf="f['buroAdi'].errors['required']">
+              Bu alan boş bırakılamaz.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ilSelect">Büro İl</label>
+          <div>
+            <label for="ilSelect"></label>
+            <select
+              formControlName="buroIl"
+              class="Dropdown-Button"
+              id="ilSelect"
+              name="selectedIl"
+              [(ngModel)]="selectedIl"
+              placeholder="Lütfen bir il seçin"
+            >
+              <option *ngFor="let il of IlListesi" [value]="il.IL_ILCE_ID">
+                {{ il.IL_ADI }}
+              </option>
+            </select>
+            <div *ngIf="submitted && f['buroIl'].errors" class="invalid-feedback">
+              <div *ngIf="f['buroIl'].value == 0">Bu alan boş bırakılamaz.</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" *ngIf="selectedIl">
+          <label for="exampleFormControlSelect1">Büro İlçe</label>
+          <div>
+            <label for="ilceSelect"></label>
+            <select
+              class="Dropdown-Button"
+              id="ilceSelect"
+              [(ngModel)]="selectedIlce"
+            >
+              <option
+                *ngFor="let ilce of getIlceList(selectedIl.toString())"
+                [value]="ilce"
+              >
+                {{ ilce }}
+              </option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label>Büro Adres </label>
+          <textarea
+            type="text"
+            formControlName="buroAdres"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f['buroAdres'].errors }"
+          ></textarea>
+          <div
+            *ngIf="submitted && f['buroAdres'].errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="f['buroAdres'].errors['required']">
+              Bu alan boş bırakılamaz.
+            </div>
+          </div>
+        </div>
+  
+        <div style="margin-bottom: 5%"></div>
+        <div class="form-group">
+          <label>Cep Telefonu </label>
+          <input
+            type="text"
+            numeric
+            maxlength="11"
+            formControlName="tel"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f['tel'].errors }"
+            (keypress)="keyPressNumbers($event)"
+          />
+          <div *ngIf="submitted && f['tel'].errors" class="invalid-feedback">
+            <div *ngIf="f['tel'].errors['required']">
+              Lütfen cep telefon numaranızı giriniz.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Faks No</label>
+          <input
+            type="text"
+            numeric
+            maxlength="5"
+            formControlName="faks"
+            class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f['faks'].errors }"
+            (keypress)="keyPressNumbers($event)"
+          />
+          <div *ngIf="submitted && f['faks'].errors" class="invalid-feedback">
+            <div *ngIf="f['faks'].errors['required']">
+              Bu alan boş bırakılamaz.
+            </div>
+          </div>
+        </div>
+        <button type="button" (click)="onReset()" class="Delete">Temizle</button>
+        <button class="Continue">Devam</button>
+      </form>
+    </div>
+  </form>
+  

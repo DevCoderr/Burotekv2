@@ -10,12 +10,14 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { AvukatBilgileriComponent } from './pages/basvuru-giris/avukat-bilgileri/avukat-bilgileri.component';
 import { SharedModule } from '../shared/modules/shared.module';
+import { SifremiUnuttumComponent } from './pages/sifremi-unuttum/sifremi-unuttum.component';
+import { BuroBilgileriComponent } from './pages/basvuru-giris/buro-bilgileri/buro-bilgileri.component';
 
 
 
 
 @NgModule({
-  declarations: [LoginComponent, HakkimizdaComponent, BasvuruGirisComponent,PublicLayoutComponent,AvukatBilgileriComponent],
+  declarations: [LoginComponent, HakkimizdaComponent, BasvuruGirisComponent,PublicLayoutComponent,AvukatBilgileriComponent, SifremiUnuttumComponent,BuroBilgileriComponent],
   imports: [
 
     SharedModule,
@@ -23,7 +25,8 @@ import { SharedModule } from '../shared/modules/shared.module';
     FormsModule,
     PublicRoutingModule,
     PrimengModule,
-    CommonModule
+    CommonModule,
+  
 
   ]
 })
