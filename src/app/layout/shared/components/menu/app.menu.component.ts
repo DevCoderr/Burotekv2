@@ -20,21 +20,21 @@ export class AppMenuComponent implements OnInit {
             {
 
                 items: [
-                    { label: 'Ana Sayfa', icon: 'pi pi-fw pi-home', routerLink: ['/giris-sayfasi'] }
+                    { label: 'Ana Sayfa', icon: 'pi pi-fw pi-home', routerLink: ['/buroTek/anasayfa']  }
                 ]
             },
             {
 
                 items: [
-                    { label: 'Yönetim Paneli', icon: 'pi pi-fw pi-id-card' ,
+                    { label: 'Yönetim Paneli', icon: 'pi pi-fw pi-id-card'  ,
                     items:[
                         {
-                            label: 'Kullanıcı İşlemleri',
-                            routerLink: ['/auth/login']
+                            label: 'Kullanıcı İşlemleri', 
+                            routerLink: ['/buroTek/kullanıcıIslemleri']
                         },
                         {
                             label: 'Büro Bilgilerim',
-                            routerLink: ['/auth/error']
+                            routerLink: ['/buroTek/Büro Bilgilerim']
                         }
 
                     ]},

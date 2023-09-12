@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-basvuru-giris',
   templateUrl: './basvuru-giris.component.html',
-  styleUrls: ['./basvuru-giris.component.scss']
+  styleUrls: ['./basvuru-giris.component.css']
 })
 export class BasvuruGirisComponent implements OnInit {
     selectedIl: number = 0;
@@ -373,9 +373,9 @@ export class BasvuruGirisComponent implements OnInit {
     selectedIlId!: number;
     selectedIlceId!: number;
     selectedIlceList: string[] = [];
+  router: any;
 
     constructor() {}
-
     ngOnInit() {}
 
     onIlSelectChange(event: any) {

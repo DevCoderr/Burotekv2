@@ -6,6 +6,8 @@ import { AppLayoutModule } from './layout/app.layout.module';
 import { SharedModule } from './layout/shared/modules/shared.module';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
     declarations: [
@@ -18,7 +20,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         SharedModule,
         ReactiveFormsModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        NgbModule,
+        
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

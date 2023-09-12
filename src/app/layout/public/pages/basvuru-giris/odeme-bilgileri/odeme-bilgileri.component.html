@@ -55,7 +55,7 @@
       <input
         type="text"
         formControlName="sahip"
-        class="form-control"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
         [ngClass]="{ 'is-invalid': submitted && f['sahip'].errors }"
       />
       <div *ngIf="submitted && f['sahip'].errors" class="invalid-feedback">
@@ -71,7 +71,7 @@
         numeric
         maxlength="11"
         formControlName="tel"
-        class="form-control"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
         [ngClass]="{ 'is-invalid': submitted && f['tel'].errors }"
         (keypress)="keyPressNumbers($event)"
       />
@@ -88,7 +88,8 @@
         numeric
         maxlength="16"
         formControlName="cardNo"
-        class="form-control"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+
         [ngClass]="{ 'is-invalid': submitted && f['cardNo'].errors }"
         (keypress)="keyPressNumbers($event)"
       />
@@ -105,7 +106,8 @@
         numeric
         maxlength="3"
         formControlName="ccv"
-        class="form-control"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+
         [ngClass]="{ 'is-invalid': submitted && f['ccv'].errors }"
         (keypress)="keyPressNumbers($event)"
       />
@@ -119,7 +121,8 @@
         type="text"
         maxlength="7"
         formControlName="sonKullanma"
-        class="form-control"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+
         [ngClass]="{ 'is-invalid': submitted && f['sonKullanma'].errors }"
       />
       <div *ngIf="submitted && f['sonKullanma'].errors" class="invalid-feedback">
@@ -162,12 +165,12 @@
           <button
             type="button"
             class="btn-c"
-            routerLink="/bilgi/uyekayitform/buro_adimi"
+            routerLink="/basvuru-giris/avukat-bilgileri"
           >
             Önceki Adım
           </button>
           <button type="button" (click)="onReset()" class="btn-b">Temizle</button>
-          <button type="submit" class="btn-a">İlerle</button>
+          <button type="submit" class="btn-a" routerLink="/login">İlerle</button>
         </div>
       </div>
     </form>

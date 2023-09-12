@@ -2,11 +2,21 @@
     <div class="register-form">
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label>Büro Adı </label>
-          <input
-            type="text"
+          <!-- <div class="card">
+            <h5>Vertical</h5>
+            <div class="field">
+                <label for="firstname1">Firstname</label>
+                <input id="firstname1" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            </div>
+            <div class="field">
+                <label for="lastname1">Lastname</label>
+                <input id="lastname1" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            </div>
+        </div> -->
+          <label for="buroAdi">Büro Adı </label>
+          <input type="text"
             formControlName="buroAdi"
-            class="form-control"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
             [ngClass]="{ 'is-invalid': submitted && f['buroAdi'].errors }"
           />
           <div *ngIf="submitted && f['buroAdi'].errors" class="invalid-feedback">
@@ -21,7 +31,7 @@
             <label for="ilSelect"></label>
             <select
               formControlName="buroIl"
-              class="Dropdown-Button"
+              class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
               id="ilSelect"
               name="selectedIl"
               [(ngModel)]="selectedIl"
@@ -41,7 +51,7 @@
           <div>
             <label for="ilceSelect"></label>
             <select
-              class="Dropdown-Button"
+              class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
               id="ilceSelect"
               [(ngModel)]="selectedIlce"
             >
@@ -54,13 +64,13 @@
             </select>
           </div>
         </div>
-
+  
         <div class="form-group">
           <label>Büro Adres </label>
           <textarea
             type="text"
             formControlName="buroAdres"
-            class="form-control"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
             [ngClass]="{ 'is-invalid': submitted && f['buroAdres'].errors }"
           ></textarea>
           <div
@@ -72,7 +82,7 @@
             </div>
           </div>
         </div>
-
+  
         <div style="margin-bottom: 5%"></div>
         <div class="form-group">
           <label>Cep Telefonu </label>
@@ -81,7 +91,7 @@
             numeric
             maxlength="11"
             formControlName="tel"
-            class="form-control"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
             [ngClass]="{ 'is-invalid': submitted && f['tel'].errors }"
             (keypress)="keyPressNumbers($event)"
           />
@@ -98,7 +108,7 @@
             numeric
             maxlength="5"
             formControlName="faks"
-            class="form-control"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
             [ngClass]="{ 'is-invalid': submitted && f['faks'].errors }"
             (keypress)="keyPressNumbers($event)"
           />
@@ -109,8 +119,8 @@
           </div>
         </div>
         <button type="button" (click)="onReset()" class="Delete">Temizle</button>
-        <button class="Continue">Devam</button>
+        <button class="Continue" (click)="onSubmit()">Devam</button>
       </form>
     </div>
   </form>
-
+  

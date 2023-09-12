@@ -5,7 +5,7 @@
         <input
           type="text"
           formControlName="fullname"
-          class="form-control"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
           [ngClass]="{ 'is-invalid': submitted && f['fullname'].errors }"
         />
         <div *ngIf="submitted && f['fullname'].errors" class="invalid-feedback">
@@ -20,7 +20,7 @@
         <input
           type="text"
           formControlName="username"
-          class="form-control"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
           [ngClass]="{ 'is-invalid': submitted && f['username'].errors }"
         />
         <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
@@ -37,7 +37,7 @@
           numeric
           maxlength="11"
           formControlName="tc"
-          class="form-control"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
           [ngClass]="{ 'is-invalid': submitted && f['tc'].errors }"
           (keypress)="keyPressNumbers($event)"
         />
@@ -55,7 +55,7 @@
           numeric
           maxlength="11"
           formControlName="tel"
-          class="form-control"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
           [ngClass]="{ 'is-invalid': submitted && f['tel'].errors }"
           (keypress)="keyPressNumbers($event)"
         />
@@ -71,7 +71,7 @@
         <input
           type="text"
           formControlName="email"
-          class="form-control"
+          class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
           [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
         />
         <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
@@ -86,12 +86,12 @@
           <button
             type="button"
             class="btn-c"
-            routerLink="/bilgi/uyekayitform/buro_adimi"
+            routerLink="/basvuru-giris/buro-adimi"
           >
             Önceki Adım
           </button>
           <button type="button" (click)="onReset()" class="btn-b">Temizle</button>
-          <button type="submit" class="btn-a">İlerle</button>
+          <button type="submit" class="btn-a" routerLink="/basvuru-giris/odeme-adimi">İlerle</button>
         </div>
       </div>
     </form>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PublicRoutingModule } from './public-routing.module';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './pages/sifremi-unuttum/login/login.component';
 import { PrimengModule } from '../shared/modules/primeng.module';
 import { FormsModule, ReactiveFormsModule, } from '@angular/forms';
 import { BasvuruGirisComponent } from './pages/basvuru-giris/basvuru-giris.component';
@@ -17,8 +17,9 @@ import { OdemeBilgileriComponent } from './pages/basvuru-giris/odeme-bilgileri/o
 
 
 
+
 @NgModule({
-  declarations: [LoginComponent, HakkimizdaComponent, BasvuruGirisComponent,PublicLayoutComponent,AvukatBilgileriComponent, SifremiUnuttumComponent,BuroBilgileriComponent,OdemeBilgileriComponent,],
+  declarations: [LoginComponent, HakkimizdaComponent, BasvuruGirisComponent, PublicLayoutComponent,AvukatBilgileriComponent, SifremiUnuttumComponent,BuroBilgileriComponent,OdemeBilgileriComponent],
   imports: [
 
     SharedModule,

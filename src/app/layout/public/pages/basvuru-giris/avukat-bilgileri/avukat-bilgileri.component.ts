@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-avukat-bilgileri',
   templateUrl: './avukat-bilgileri.component.html',
-  styleUrls: ['./avukat-bilgileri.component.scss'],
+  styleUrls: ['./avukat-bilgileri.component.css'],
 })
 export class AvukatBilgileriComponent {
   form: FormGroup = new FormGroup({

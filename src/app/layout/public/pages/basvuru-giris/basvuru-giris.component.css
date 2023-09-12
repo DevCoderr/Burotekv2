@@ -77,23 +77,31 @@
   .a {
     color: white;
     background-color: #18a689;
-    width: 31%;
-    margin: 18px 2.2em 2.5em;
+    width: 29%;
+    margin: 1%;
+    margin-left: 3.5%;
+    border-radius: 5px;
+    height: 30px;
+    border: 0;
   }
   .b {
-
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: #c2c2c2;
-    width: 326px;
-    margin: 17px -1.5em 2.5em;
-
+    width: 30%;
+    margin: 1%;
+    border-radius: 5px;
+    height: 30px;
+    border: 0;
   }
 
   .c {
     color: white;
     background-color: #c2c2c2;
-    width: 29%;
-    margin: 11px 2.5em -91.5em;
+    width: 30%;
+    margin: 1%;
+    border-radius: 5px;
+    height: 30px;
+    border: 0;
   }
 
   .Delete {
@@ -145,3 +153,7 @@
     margin-left: 63%;
     margin-top: 10px;
   }
+
+a{
+  color: white;
+}

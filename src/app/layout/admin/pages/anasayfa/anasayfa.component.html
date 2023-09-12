@@ -1,1 +1,434 @@
-<p>anasayfa works!</p>
+<!-- <div class="container-fluid">
+  <div class="content">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-8 col-xl-2 px-sm-10 px-0 bg-dark">
+        Yönetim Paneli 
+        <li>
+          <a
+            href="#yonetim-paneli"
+            data-bs-toggle="collapse"
+            class="nav-link px-0 align-middle"
+          >
+          <i class="fa-solid fa-gears"></i>
+            <span class="ms-1 d-none  d-sm-inline" style="background-color: white;">Yönetim Paneli</span>
+          </a>
+          <ul
+            class="collapse show nav flex-column ms-1"
+            id="yonetim-paneli"
+            data-bs-parent="#menu"
+          >
+            <li class="w-100">
+              <a   (click)="gotoPage('yonetim/kullanicilistesi')" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Kullanıcı İşlemleri</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Büro Bilgilerim</span> 
+              </a>
+            </li>
+          </ul>
+        </li>
+           Kişi İşlemleri 
+
+        <li>
+          <a
+          href="#kisi-islemleri"
+            data-bs-toggle="collapse"
+            class="nav-link px-0 align-middle"
+          >
+          <i class="fa-solid fa-user"></i>
+            <span class="ms-1 d-none d-sm-inline" style="background-color: white;" >Kişi İşlemleri</span>
+          </a>
+          <ul
+            class="collapse show nav flex-column ms-1"
+            id="kisi-islemleri"
+            data-bs-parent="#menu"
+          >
+            <li class="w-100">
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Müvekkiller</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Karşı Taraf</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Diğer Kişiler</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Kişi Listesi</span> 
+              </a>
+            </li>
+          </ul>
+        </li>
+
+       Notlar
+
+
+       <li>
+        <a
+          href="#notlar"
+          data-bs-toggle="collapse"
+          class="nav-link px-0 align-middle"
+        >
+        <i class="fa-solid fa-note-sticky"></i>
+          <span class="ms-1 d-none  d-sm-inline" style="background-color: white;">Notlar</span>
+        </a>
+        <ul
+          class="collapse show nav flex-column ms-1"
+          id="notlar"
+          data-bs-parent="#menu"
+        >
+          <li class="w-100">
+            <a href="#" class="nav-link px-0">
+              <span class="d-none d-sm-inline">Not Listesi</span> 
+            </a>
+            <a href="#" class="nav-link px-0">
+              <span class="d-none d-sm-inline">Yapılacak İşler Listesi</span> 
+            </a>
+          </li>
+        </ul>
+      </li>
+
+         Evrak 
+
+        <li>
+          <a
+            href="#evrak"
+            data-bs-toggle="collapse"
+            class="nav-link px-0 align-middle"
+          >
+          <i class="fa-solid fa-book"></i>
+            <span class="ms-1 d-none d-sm-inline" style="background-color: white;">Evrak</span>
+          </a>
+          <ul
+            class="collapse show nav flex-column ms-1"
+            id="evrak"
+            data-bs-parent="#menu"
+          >
+            <li class="w-100">
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Yeni Evrak</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Evrak İşlemleri</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Kurum İşlemleri</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Belge Türü İşlemleri</span> 
+              </a>
+            </li>
+          </ul>
+        </li>
+
+       Danışma 
+
+        <li>
+          <a
+            href="#danisma"
+            data-bs-toggle="collapse"
+            class="nav-link px-0 align-middle"
+          >
+          <i class="fa-solid fa-users"></i>
+            <span class="ms-1 d-none  d-sm-inline" style="background-color: white;">Danışma</span>
+          </a>
+          <ul
+            class="collapse show nav flex-column ms-1"
+            id="danisma"
+            data-bs-parent="#menu"
+          >
+            <li class="w-100">
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Yeni Danışma</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Danışma İşlemleri</span> 
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        Dava 
+
+        <li>
+          <a
+            href="#dava"
+            data-bs-toggle="collapse"
+            class="nav-link px-0 align-middle"
+          >
+            <i class="fa-solid fa-gavel"></i>
+            <span class="ms-1 d-none d-sm-inline" style="background-color: white;">Dava</span>
+          </a>
+          <ul
+            class="collapse show nav flex-column ms-1"
+            id="dava"
+            data-bs-parent="#menu"
+          >
+            <li class="w-100">
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Yeni Dava</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Dava Listesi</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Kurum İşlemleri</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Duruşma Listesi</span> 
+              </a>
+            </li>
+          </ul>
+        </li>
+
+                  iCRA
+
+                  <li>
+                    <a
+                      href="#icra"
+                      data-bs-toggle="collapse"
+                      class="nav-link px-0 align-middle"
+                    >
+                    <i class="fa-solid fa-microchip"></i>
+                      <span class="ms-1 d-none d-sm-inline" style="background-color: white;">İcra</span>
+                    </a>
+                    <ul
+                      class="collapse show nav flex-column ms-1"
+                      id="icra"
+                      data-bs-parent="#menu"
+                    >
+                      
+                      <li class="w-100">
+                        <a href="#" class="nav-link px-0">
+                          <span class="d-none d-sm-inline">Yeni İcra</span> 
+                        </a>
+                        <a href="#" class="nav-link px-0">
+                          <span class="d-none d-sm-inline">İcra Listesi</span> 
+                        </a>
+                        <a href="#" class="nav-link px-0">
+                          <span class="d-none d-sm-inline">İcra Dairesi İşlemleri</span> 
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  Cari İşlemler 
+
+        <li>
+          <a
+            href="#cari-islemler"
+            data-bs-toggle="collapse"
+            class="nav-link px-0 align-middle"
+          >
+          <i class="fa-regular fa-money-bill-1"></i>
+            <span class="ms-1 d-none d-sm-inline" style="background-color: white;">Cari İşlemler</span>
+          </a>
+          <ul
+            class="collapse show nav flex-column ms-1"
+            id="cari-islemler"
+            data-bs-parent="#menu"
+          >
+            <li class="w-100">
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Yeni Ödeme</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Evrak İşlemleri</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Kurum İşlemleri</span> 
+              </a>
+              <a href="#" class="nav-link px-0">
+                <span class="d-none d-sm-inline">Belge Türü İşlemleri</span> 
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+                 Arşiv 
+                 <li>
+                  <a
+                    href="#arsiv"
+                    data-bs-toggle="collapse"
+                    class="nav-link px-0 align-middle"
+                  >
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span class="ms-1 d-none  d-sm-inline" style="background-color: white;">Arşiv</span>
+                  </a>
+                  <ul
+                    class="collapse show nav flex-column ms-1"
+                    id="arsiv"
+                    data-bs-parent="#menu"
+                  >
+                    <li class="w-100">
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline">Arşiv Listesi</span> 
+                      </a>
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline">Arşiv Türleri</span> 
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+
+                  Demirbaş 
+                 <li>
+                  <a
+                    href="#demirbas"
+                    data-bs-toggle="collapse"
+                    class="nav-link px-0 align-middle"
+                  >
+                  <i class="fa-solid fa-building-columns"></i>
+                    <span class="ms-1 d-none  d-sm-inline" style="background-color: white;">Demirbaş</span>
+                  </a>
+                  <ul
+                    class="collapse show nav flex-column ms-1"
+                    id="demirbas"
+                    data-bs-parent="#menu"
+                  >
+                    <li class="w-100">
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline">Demirbaş Listesi</span> 
+                      </a>
+                      <a href="#" class="nav-link px-0">
+                        <span class="d-none d-sm-inline">Lokasyon Listesi</span> 
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                                 Kütüphane
+
+                                <li>
+                                  <a
+                                    href="#kutuphane"
+                                    data-bs-toggle="collapse"
+                                    class="nav-link px-0 align-middle"
+                                  >
+                                  <i class="fa-solid fa-book"></i>
+                                    <span class="ms-1 d-none d-sm-inline" style="background-color: white;">Kütüphane</span>
+                                  </a>
+                                  <ul
+                                    class="collapse show nav flex-column ms-1"
+                                    id="kutuphane"
+                                    data-bs-parent="#menu"
+                                  >
+                                    <li class="w-100">
+                                      <a href="#" class="nav-link px-0">
+                                        <span class="d-none d-sm-inline">Yayınlar</span> 
+                                      </a>
+                                      <a href="#" class="nav-link px-0">
+                                        <span class="d-none d-sm-inline">Yayın Türleri</span> 
+                                      </a>
+                                      <a href="#" class="nav-link px-0">
+                                        <span class="d-none d-sm-inline">Kütüphane Listesi</span> 
+                                      </a>
+                                      <a href="#" class="nav-link px-0">
+                                        <span class="d-none d-sm-inline">Ödünç Yayınalr Listesi</span> 
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                                                  Araçlar 
+
+                                                                  <li>
+                                                                    <a
+                                                                      href="#araclar"
+                                                                      data-bs-toggle="collapse"
+                                                                      class="nav-link px-0 align-middle"
+                                                                    >
+                                                                    <i class="fa-solid fa-gear"></i>
+                                                                      <span class="ms-1 d-none d-sm-inline" style="background-color: white;">Araçlar</span>
+                                                                    </a>
+                                                                    <ul
+                                                                      class="collapse show nav flex-column ms-1"
+                                                                      id="araclar"
+                                                                      data-bs-parent="#menu"
+                                                                    >
+                                                                      <li class="w-100">
+                                                                        <a href="#" class="nav-link px-0">
+                                                                          <span class="d-none d-sm-inline">Dosya Kayıt</span> 
+                                                                        </a>
+                                                                        <a href="#" class="nav-link px-0">
+                                                                          <span class="d-none d-sm-inline">Mevzuat</span> 
+                                                                        </a>
+                                                                        <a href="#" class="nav-link px-0">
+                                                                          <span class="d-none d-sm-inline">Dilekçeler</span> 
+                                                                        </a>
+                                                                        <a href="#" class="nav-link px-0">
+                                                                          <span class="d-none d-sm-inline">Hesaplama Araçları</span> 
+                                                                        </a>
+                                                                        <a href="#" class="nav-link px-0">
+                                                                          <span class="d-none d-sm-inline">Standart Faizler</span> 
+                                                                        </a>
+                                                                        <a href="#" class="nav-link px-0">
+                                                                          <span class="d-none d-sm-inline">Fatura İşlemleri</span> 
+                                                                        </a>
+                                                                        <a href="#" class="nav-link px-0">
+                                                                          <span class="d-none d-sm-inline">Kullanıcı Tercihleri</span> 
+                                                                        </a>
+                                                                      </li>
+                                                                    </ul>
+                                                                  </li> 
+
+
+                               İletişim 
+
+                              <li>
+                                <a
+                                  href="#iletisim"
+                                  data-bs-toggle="collapse"
+                                  class="nav-link px-0 align-middle"
+                                >
+                                <i class="fa-solid fa-phone"></i>
+                                  <span class="ms-1 d-none d-sm-inline" style="background-color: white;">İletişim</span>
+                                </a>
+                                <ul
+                                  class="collapse show nav flex-column ms-1"
+                                  id="iletisim"
+                                  data-bs-parent="#menu"
+                                >
+                                  <li class="w-100">
+                                    <a href="#" class="nav-link px-0">
+                                      <span class="d-none d-sm-inline">İletişim Bilgileri</span> 
+                                    </a>
+                                    <a href="#" class="nav-link px-0">
+                                      <span class="d-none d-sm-inline">Sıkça Sorulan Sorular</span> 
+                                    </a>
+                                    <a href="#" class="nav-link px-0">
+                                      <span class="d-none d-sm-inline">Talepler</span> 
+                                    </a>
+                                    <a href="#" class="nav-link px-0">
+                                      <span class="d-none d-sm-inline">Kullanım Klavuzları</span> 
+                                    </a>
+                                    <a href="#" class="nav-link px-0">
+                                      <span class="d-none d-sm-inline">Yardım Videoları</span> 
+                                    </a>
+                                  </li>
+                                </ul>
+                              </li> -->
