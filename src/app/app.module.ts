@@ -7,6 +7,7 @@ import { SharedModule } from './layout/shared/modules/shared.module';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PrimengModule } from './layout/shared/modules/primeng.module';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         FormsModule,
         CommonModule,
         NgbModule,
+        PrimengModule,
         
     ],
     providers: [

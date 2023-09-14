@@ -1,17 +1,21 @@
-<div class="layout-topbar mb-7">
+<div class="layout-topbar flex justify-content-between mb-7 ">
+    <div class="flex align-items-center justify-content-center gap-10">
 
-    <a href="https://www.ardgrup.com.tr/" target="_blank"> <img src="../../../../../assets/layout/images/ardgrup.png"  alt="#" style="width: 35%;"></a>
-    <div class="col-md-8" style="margin-left:200px;  text-align: center; ">
-
-    <a href="https://uhap.com.tr//#/kullanici/giris/" target="_blank"> <img src="../../../../../assets/layout/images/uhap.png"  alt="#" style="width: 16%;"></a>
+        <a href="https://www.ardgrup.com.tr/" target="_blank"> <img src="../../../../../assets/layout/images/ardgrup.png" class="layout-topbar-logo"  alt="logo"  ></a>
+        <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
+            <i class="pi pi-bars"></i>
+        </button>
+    </div>
+    <div class=" hidden md:flex align-items-center justify-content-center gap-2">
+    <a href="https://uhap.com.tr//#/kullanici/giris/" target="_blank"> <img src="../../../../../assets/layout/images/uhap.png"  alt="#" ></a>
     &nbsp;
-    <a href="https://www.icratek.com.tr/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/icratek.png" alt="#" style="width: 16%;"></a>
+    <a href="https://www.icratek.com.tr/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/icratek.png" alt="#" ></a>
     &nbsp;
-    <a href="https://www.karartek.com.tr/#/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/karartek.png" alt="#" style="width: 16%;"></a>
+    <a href="https://www.karartek.com.tr/#/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/karartek.png" alt="#" ></a>
     &nbsp;
-    <a href="https://ocas.com.tr/#/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/ocas.png" alt="#" style=" width: 16%;"></a>
+    <a href="https://ocas.com.tr/#/anasayfa" target="_blank"><img src="../../../../../assets/layout/images/ocas.png" alt="#" ></a>
     &nbsp;
-    <a href="https://makbuztek.com.tr/#/login?a=q9Jqmg3XWHqEz037hjapyl1Bx0Dj7Slo8nsDmuBmVys%3D" target="_blank"><img src="../../../../../assets/layout/images/makbuztek.jpeg" alt="#" style=" width: 16%;"></a>
+    <a href="https://makbuztek.com.tr/#/login?a=q9Jqmg3XWHqEz037hjapyl1Bx0Dj7Slo8nsDmuBmVys%3D" target="_blank"><img src="../../../../../assets/layout/images/makbuztek.jpeg" alt="#" ></a>
     </div>
 
     <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="layoutService.showProfileSidebar()">
@@ -19,29 +23,16 @@
     </button>
 
     <div #topbarmenu class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible}">
-        <div>
-            <button class="p-link "  routerLink="hakkimizda">
+        <ul class="flex md:flex-row flex-column list-none gap-2 justify-content-center align-items-center">
+            <li><button class="p-link "  routerLink="/hakkimizda">
                 <span>Hakkımızda</span>
-            </button>
-        </div>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <div>
-            <button class="p-link " routerLink="basvuru-giris/buro-adimi">
+            </button></li>
+            <li><button class="p-link " routerLink="/basvuru-giris/buro-adimi">
                 <span>Başvuru</span>
-            </button>
-        </div>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <div>
-            <button class="p-link " routerLink="login">
+            </button></li>
+            <li> <button class="p-link " routerLink="/login">
                 <span>Kullanıcı Girişi</span>
-            </button>
-        </div>
-
+            </button></li>
+        </ul>
     </div>
 </div>

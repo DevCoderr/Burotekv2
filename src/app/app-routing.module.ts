@@ -3,23 +3,25 @@ import {  NgModule } from '@angular/core';
 
 import { AppLayoutComponent } from "./layout/app.layout.component";
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
+import { KullaniciIslemleriComponent } from './layout/admin/pages/yonetim-paneli/kullanici-islemleri/kullanici-islemleri.component';
 
 @NgModule({
     imports: [
 
         RouterModule.forRoot([
-            {
+            {   
                 path:'',
                 pathMatch:'full',
                 redirectTo:'login'
             },
             { path:'',loadChildren:()=>import('./layout/public/public.module').then(m=>m.PublicModule)  },
+            {path:'admin', loadChildren: () => import('./layout/admin/admin.module').then(m => m.AdminModule) },
             {
                 path:'buroTek',
                 component:AppLayoutComponent,
                 children:[
-
-                    { path: 'anasayfa', loadChildren: () => import('./demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },
+                    
+                    // { path: 'anasayfa', loadChildren: () => import('./demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },
                     { path: 'basvuru-giris/buro-adimi', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UIkitModule) },
                     { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },
                     { path: 'documentation', loadChildren: () => import('./demo/components/documentation/documentation.module').then(m => m.DocumentationModule) },

@@ -1,3 +1,4 @@
+import { InputTextModule } from 'primeng/inputtext';
 import { Component } from '@angular/core';
 import {
   AbstractControl,

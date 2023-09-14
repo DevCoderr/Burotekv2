@@ -1,3 +1,4 @@
+<div class="form-container">
 <form>
     <div class="register-form">
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -14,13 +15,17 @@
             </div>
         </div> -->
           <label for="buroAdi">Büro Adı </label>
+          <div class="flex flex-column gap-2">
+
+</div>
           <input type="text"
+          
             formControlName="buroAdi"
             class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
             [ngClass]="{ 'is-invalid': submitted && f['buroAdi'].errors }"
           />
           <div *ngIf="submitted && f['buroAdi'].errors" class="invalid-feedback">
-            <div *ngIf="f['buroAdi'].errors['required']">
+            <div  *ngIf="f['buroAdi'].errors['required']">
               Bu alan boş bırakılamaz.
             </div>
           </div>
@@ -118,9 +123,11 @@
             </div>
           </div>
         </div>
-        <button type="button" (click)="onReset()" class="Delete">Temizle</button>
-        <button class="Continue" (click)="onSubmit()">Devam</button>
+          <div class="button-a" style="float: right;margin: 40px;float: right;margin: -9px;margin-right: 41px;">
+        <button type="button" (click)="onReset()"  pButton pRipple class="p-button-danger btn-sm:2px p-button p-component" style="background-color: #c73939;" >Temizle</button>
+        <button  pButton pRipple class="p-button-success"style="margin-left: 12px; margin-top: 0px ; background-color: #03a154" (click)="onSubmit()">Devam</button>
+      </div>
       </form>
     </div>
   </form>
-  
+  </div>

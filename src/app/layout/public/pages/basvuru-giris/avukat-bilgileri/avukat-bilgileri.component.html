@@ -81,18 +81,20 @@
           <div *ngIf="f['email'].errors['email']">Geçersiz E-Posta Adresi</div>
         </div>
       </div>
-      <div class="button">
-        <div class="form-group mt-3 m-lg-3">
+      <div style="float: right;margin: 40px;float: right;margin: -9px;margin-right: 41px;">
           <button
             type="button"
-            class="btn-c"
+            pButton pRipple class="p-button-secondary btn-sm:2px"
+            class="p-button-danger btn-sm:2px"
             routerLink="/basvuru-giris/buro-adimi"
+            style="background-color: #c2c2c2; margin-top: 0px"
           >
             Önceki Adım
           </button>
-          <button type="button" (click)="onReset()" class="btn-b">Temizle</button>
-          <button type="submit" class="btn-a" routerLink="/basvuru-giris/odeme-adimi">İlerle</button>
-        </div>
-      </div>
+          
+            <button type="button" (click)="onReset()"  pButton pRipple class="p-button-danger btn-sm:2px" style="background-color: #c73939;" >Temizle</button>
+            <button  pButton pRipple class="p-button-success"style="margin-left: 12px; margin-top: 0px ; background-color: #03a154" (click)="onSubmit()">Devam</button>
+          </div>
+          
     </form>
   </div>

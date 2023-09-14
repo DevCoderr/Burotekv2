@@ -70,35 +70,4 @@
     height: 4vh;
   }
 
-  button-container {
-    display: flex;
-    justify-content: flex-end; /* Butonları sağ üst köşeye hizala /
-    margin-top: 20px; / İstenilen boşluk */
-  }
-
-  .Delete {
-    color: white;
-    border-radius: 6px;
-    width: 10%;
-    background-color: #ec4758;
-    border-color: #ec4758;
-    font-weight: 100;
-    transition: background-color 0.3s ease;
-    margin-left: 74%;
-    margin-right: 10px;
-    padding: 1px 4px;
-    display: inline-block;
-    border: 1;
-  }
-
-  .Continue {
-    color: white;
-    border-radius: 6px;
-    width: 10%;
-    background-color: #1ab394;
-    border-color: #1ab394;
-    font-weight: 100;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    border: 1;
-  }
+  

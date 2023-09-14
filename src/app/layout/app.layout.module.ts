@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppLayoutComponent } from "./app.layout.component";
 import { SharedModule } from './shared/modules/shared.module';
 import { PublicModule } from './public/public.module';
+import { PrimengModule } from './shared/modules/primeng.module';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { PublicModule } from './public/public.module';
         BrowserAnimationsModule,
         RouterModule,
         SharedModule,
-        PublicModule
+        PublicModule,
+        PrimengModule,
     ],
     exports: [AppLayoutComponent]
 })

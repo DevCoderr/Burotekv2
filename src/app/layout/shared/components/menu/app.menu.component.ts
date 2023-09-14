@@ -20,7 +20,7 @@ export class AppMenuComponent implements OnInit {
             {
 
                 items: [
-                    { label: 'Ana Sayfa', icon: 'pi pi-fw pi-home', routerLink: ['/buroTek/anasayfa']  }
+                    { label: 'Ana Sayfa', icon: 'pi pi-fw pi-home', routerLink: ['/admin/anasayfa']  }
                 ]
             },
             {
@@ -30,11 +30,11 @@ export class AppMenuComponent implements OnInit {
                     items:[
                         {
                             label: 'Kullanıcı İşlemleri', 
-                            routerLink: ['/buroTek/kullanıcıIslemleri']
+                            routerLink: ['kullanici-islemleri']
                         },
                         {
                             label: 'Büro Bilgilerim',
-                            routerLink: ['/buroTek/Büro Bilgilerim']
+                            routerLink: ['buro-islemleri']
                         }
 
                     ]},
@@ -47,19 +47,19 @@ export class AppMenuComponent implements OnInit {
                     items:[
                         {
                             label: 'Müvekkiller',
-                            routerLink: ['/auth/login']
+                            routerLink: ['muvekkiller']
                         },
                         {
                             label: 'Karşı Taraf',
-                            routerLink: ['/auth/error']
+                            routerLink: ['karsi-taraf']
                         },
                         {
                             label: 'Diğer Kişiler',
-                            routerLink: ['/auth/login']
+                            routerLink: ['diger-kisiler']
                         },
                         {
                             label: 'Kişi Listesi',
-                            routerLink: ['/auth/error']
+                            routerLink: ['kisi-listesi']
                         }
                     ]},
                 ]
@@ -70,11 +70,11 @@ export class AppMenuComponent implements OnInit {
                         items:[
                             {
                                 label: 'Not Listesi',
-                                routerLink: ['/auth/login']
+                                routerLink: ['not-listesi']
                             },
                             {
                                 label: 'Yapılacak İşler Listesi',
-                                routerLink: ['/auth/error']
+                                routerLink: ['yapilacak-isler-listesi']
                             }
                         ]},
                     ]
@@ -85,19 +85,19 @@ export class AppMenuComponent implements OnInit {
                     items:[
                         {
                             label: 'Yeni Evrak',
-                            routerLink: ['/auth/login']
+                            routerLink: ['yeni-evrak']
                         },
                         {
                             label: 'Evrak İşlemleri',
-                            routerLink: ['/auth/error']
+                            routerLink: ['evrak-islemleri']
                         },
                         {
                             label: 'Kurum İşlemleri',
-                            routerLink: ['/auth/login']
+                            routerLink: ['kurum-islemleri']
                         },
                         {
                             label: 'Belge Türü İşlemleri',
-                            routerLink: ['/auth/error']
+                            routerLink: ['belge-türü-islemleri']
                         }
                     ]},
                 ]
@@ -108,11 +108,11 @@ export class AppMenuComponent implements OnInit {
                     items:[
                         {
                             label: 'Yeni Danışma',
-                            routerLink: ['/auth/login']
+                            routerLink: ['yeni-danisma']
                         },
                         {
                             label: 'Danışma Listesi',
-                            routerLink: ['/auth/error']
+                            routerLink: ['danisma-listesi']
                         }
                     ]},
                 ]
@@ -123,19 +123,19 @@ export class AppMenuComponent implements OnInit {
                 items:[
                     {
                         label: 'Yeni Dava',
-                        routerLink: ['/auth/login']
+                        routerLink: ['yeni-dava']
                     },
                     {
                         label: 'Dava Listesi',
-                        routerLink: ['/auth/error']
+                        routerLink: ['dava-listesi']
                     },
                     {
                         label: 'Kurum İşlemleri',
-                        routerLink: ['/auth/login']
+                        routerLink: ['kurum-islemleri']
                     },
                     {
                         label: 'Duruşma Listesi',
-                        routerLink: ['/auth/error']
+                        routerLink: ['durusma-listesi']
                     }
                 ]},
             ]
@@ -146,15 +146,15 @@ export class AppMenuComponent implements OnInit {
             items:[
                 {
                     label: 'Yeni İcra',
-                    routerLink: ['/auth/login']
+                    routerLink: ['yeni-icra']
                 },
                 {
                     label: 'İcra Listesi',
-                    routerLink: ['/auth/error']
+                    routerLink: ['icra-listesi']
                 },
                 {
                     label: 'İcra Dairesi İşlemleri',
-                    routerLink: ['/auth/login']
+                    routerLink: ['icra-dairesi-islemleri']
                 }
             ]},
         ]
@@ -165,23 +165,23 @@ export class AppMenuComponent implements OnInit {
         items:[
             {
                 label: 'Yeni Ödeme',
-                routerLink: ['/auth/login']
+                routerLink: ['yeni-odeme']
             },
             {
                 label: 'Yeni Tahsilat',
-                routerLink: ['/auth/error']
+                routerLink: ['yeni-tahsilat']
             },
             {
                 label: 'Cari İşlem Geçmişi',
-                routerLink: ['/auth/login']
+                routerLink: ['cari-islem-gecmisi']
             },
             {
                 label: 'Cariler',
-                routerLink: ['/auth/error']
+                routerLink: ['cariler']
             },
             {
                 label: 'Cari Hesap İşlem Adları',
-                routerLink: ['/auth/error']
+                routerLink: ['cari-hesap-islem-adlari']
             }
         ]},
     ]
@@ -192,11 +192,11 @@ export class AppMenuComponent implements OnInit {
         items:[
             {
                 label: 'Arşiv Listesi',
-                routerLink: ['/auth/login']
+                routerLink: ['arsiv-listesi']
             },
             {
                 label: 'Arşiv Türleri',
-                routerLink: ['/auth/error']
+                routerLink: ['arsiv-türleri']
             }
         ]},
     ]
@@ -208,11 +208,11 @@ export class AppMenuComponent implements OnInit {
         items:[
             {
                 label: 'Demirbas Listesi',
-                routerLink: ['/auth/login']
+                routerLink: ['demirbas-listesi']
             },
             {
                 label: 'Lokasyon Listesi',
-                routerLink: ['/auth/error']
+                routerLink: ['lokasyon-listesi']
             }
         ]},
     ]
@@ -224,19 +224,19 @@ export class AppMenuComponent implements OnInit {
     items:[
         {
             label: 'Yayınlar',
-            routerLink: ['/auth/login']
+            routerLink: ['yayinlar']
         },
         {
             label: 'Yayın Türleri',
-            routerLink: ['/auth/error']
+            routerLink: ['yayin-türleri']
         },
         {
             label: 'Kütüphane Listesi',
-            routerLink: ['/auth/login']
+            routerLink: ['kutuphane-listesi']
         },
         {
             label: 'Ödünç Yayınları Listesi',
-            routerLink: ['/auth/error']
+            routerLink: ['odunc-yayinlari-listesi']
         }
     ]},
 ]
@@ -247,31 +247,31 @@ export class AppMenuComponent implements OnInit {
     items:[
         {
             label: 'Dosya Kayıt',
-            routerLink: ['/auth/login']
+            routerLink: ['dosya-kayit']
         },
         {
             label: 'Mevzuat',
-            routerLink: ['/auth/error']
+            routerLink: ['mevzuat']
         },
         {
             label: 'Dilekçeler',
-            routerLink: ['/auth/login']
+            routerLink: ['dilekceler']
         },
         {
             label: 'Hesaplama Araçları',
-            routerLink: ['/auth/error']
+            routerLink: ['hesaplama-araclari']
         },
         {
             label: 'Standart Faizler',
-            routerLink: ['/auth/error']
+            routerLink: ['standart-faizler']
         },
         {
             label: 'Fatura İşlemleri',
-            routerLink: ['/auth/login']
+            routerLink: ['fatura-islemleri']
         },
         {
             label: 'Kullanıcı Tercihleri',
-            routerLink: ['/auth/error']
+            routerLink: ['kullanici-tercihleri']
         }
     ]},
 ]
@@ -283,23 +283,23 @@ export class AppMenuComponent implements OnInit {
     items:[
         {
             label: 'İletişim Bilgileri',
-            routerLink: ['/auth/login']
+            routerLink: ['iletisim-bilgileri']
         },
         {
             label: 'Sıkça Sorulan Sorular',
-            routerLink: ['/auth/error']
+            routerLink: ['sıkca-sorulan-sorular']
         },
         {
             label: 'Talepler',
-            routerLink: ['/auth/login']
+            routerLink: ['talepler']
         },
         {
             label: 'Kullanım Klavuzları',
-            routerLink: ['/auth/error']
+            routerLink: ['kullanim-kilavuzlari']
         },
         {
             label: 'Yardım Videoları',
-            routerLink: ['/auth/error']
+            routerLink: ['yardim-videolari']
         }
     ]},
 ]

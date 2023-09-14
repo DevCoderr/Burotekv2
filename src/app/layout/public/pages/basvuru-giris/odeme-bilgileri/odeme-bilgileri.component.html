@@ -1,5 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="Summary" style="font-size: 13px; " >
-    <div class="en büyük div">
+  <div class="container">
+  <div class="en büyük div">
     <div class="form-group1">
       <label for="adSoyad"><b>Ad Soyad</b></label>
       <div class="ng-binding"></div>
@@ -145,9 +146,7 @@
               required=""
               class="ng-pristine ng-untouched ng-invalid ng-invalid-required"
             />
-            <a ng-click="modalSozlesmeAc('uyelik')">    Üyelik sözleşmesini</a> ve&nbsp;<a ng-click="modalSozlesmeAc('gizlilik')">Gizlilik anlaşmasını</a>&nbsp;okudum. Kabul ediyorum.
-
-            <ins class="iCheck-helper"></ins>
+            <a ng-click="modalSozlesmeAc('uyelik')">    Üyelik sözleşmesini</a> ve&nbsp;<a ng-click="modalSozlesmeAc('gizlilik')">Gizlilik anlaşmasını</a>&nbsp;okudum. Kabul ediyorum.<ins class="iCheck-helper"></ins>
           </div>
           &nbsp;
         </span>
@@ -160,21 +159,22 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()" class="Summary" style="font-size: 13px; position: relative;">
 
 
-      <div class="button">
-        <div class="form-group mt-3 m-lg-3">
-          <button
-            type="button"
-            class="btn-c"
-            routerLink="/basvuru-giris/avukat-bilgileri"
-          >
-            Önceki Adım
-          </button>
-          <button type="button" (click)="onReset()" class="btn-b">Temizle</button>
-          <button type="submit" class="btn-a" routerLink="/login">İlerle</button>
+      <div style="float: right; margin: 10px;">
+        <button
+          type="button"
+          pButton pRipple class="p-button-secondary btn-sm:2px"
+          class="p-button-danger btn-sm:2px"
+          routerLink="/basvuru-giris/buro-adimi"
+          style="background-color: #c2c2c2; margin-top: 0px"
+        >
+          Önceki Adım
+        </button>
+        
+          <button type="button" (click)="onReset()"  pButton pRipple class="p-button-danger btn-sm:2px" style="background-color: #c73939;" >Temizle</button>
+          <button  pButton pRipple class="p-button-success"style="margin-left: 12px; margin-top: 0px ; background-color: #03a154" (click)="onSubmit()">Devam</button>
         </div>
-      </div>
     </form>
 
 
-
+</div>  
   </form>

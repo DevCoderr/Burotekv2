@@ -18,7 +18,7 @@
         color: var(--surface-900);
         font-size: 1.5rem;
         font-weight: 500;
-        width: 300px;
+        width: 65px;
         border-radius: 12px;
 
         img {
@@ -75,7 +75,7 @@
     }
 
     .layout-topbar-menu {
-        margin: 0 0 0 auto;
+       
         padding: 0;
         list-style: none;
         display: flex;
@@ -91,7 +91,7 @@
         justify-content: space-between;
 
         .layout-topbar-logo {
-            width: auto;
+            width: 50px;
             order: 2;
         }
 
