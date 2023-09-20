@@ -1,1 +1,37 @@
-<p>yeni-odeme works!</p>
+<h5>Cari İşlemler</h5>
+<div class="card">
+    <h6>Lütfen işlem bilgilerini eksiksiz giriniz.</h6>
+    <div class="field">
+        <label for="state">Cari Hesap İşlem Adı</label>
+        <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+            <option>006 - Büro Kirası</option>
+            <option>M.01 - Dava Açma Gideri</option>
+            <option>M.02 - İcra Takip Gideri</option>
+            <option>0013 - İkram Gideri</option>
+            <option>KRH01 - Kira Harcı</option>
+            <option>00004 - Örnek Cari Gider</option>
+            <option>M.03 - Tebligat Gideri</option>
+        </select>
+    </div>
+    <div class="field">
+        <label for="firstname6">Cari</label>
+        <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    </div>
+    <div class="field">
+        <label for="lastname6">Tutar</label>
+        <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+    </div>
+    <div class="field">
+        <label for="address">Açıklama</label>
+        <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+    </div>
+    <form class="flex align-items-center gap-1" [formGroup]="formGroup">
+        <p-checkbox formControlName="city" value="New York" inputId="ny"></p-checkbox>
+        <label for="ny">Ödendi</label>
+    </form>
+    
+</div>
+<div class="buttons">
+    <p-button label="Geri" styleClass="p-button-rounded p-button-secondary pi pi-arrow-circle-left"></p-button>
+    <p-button label="Kaydet"styleClass="p-button-rounded p-button-success pi pi-save"></p-button>
+</div>

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./kullanici-tercihleri.component.scss']
 })
 export class KullaniciTercihleriComponent {
-
+ products : any [] = []
 }

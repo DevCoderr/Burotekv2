@@ -1,1 +1,32 @@
-<p>hesaplama-araclari works!</p>
+<h5>Hesaplama Türleri</h5>
+
+<div class="card">
+  <div class="formgroup-inline">
+    <div class="field-radiobutton">
+      <input type="radio" name="hcity" id="vekalet" [(ngModel)]="selectedOption" value="vekalet">
+      <label for="vekalet">Vekalet Ücreti Hesaplama</label>
+    </div>
+    <div class="field-radiobutton">
+      <input type="radio" name="hcity" id="faiz" [(ngModel)]="selectedOption" value="faiz">
+      <label for="faiz">Faiz Hesapla</label>
+    </div>
+    <div class="field-radiobutton">
+      <input type="radio" name="hcity" id="icra" [(ngModel)]="selectedOption" value="icra">
+      <label for="icra">İcra Takip Harcı Hesapla</label>
+    </div>
+  </div>
+  <div class="formgroup-inline">
+    <div class="field-radiobutton">
+      <input type="radio" name="hcity" id="meslek" [(ngModel)]="selectedOption" value="meslek">
+      <label for="meslek">Serbest Meslek Makbuzu Hesapla</label>
+    </div>
+    <div class="field-radiobutton">
+      <input type="radio" name="hcity" id="dava" [(ngModel)]="selectedOption" value="dava">
+      <label for="dava">Dava Harcı Hesapla</label>
+    </div>
+    <div class="field-radiobutton">
+      <input type="radio" name="hcity" id="borcu" [(ngModel)]="selectedOption" value="borcu">
+      <label for="borcu">Takip Borcu Hesaplama</label>
+    </div>
+  </div>
+</div>

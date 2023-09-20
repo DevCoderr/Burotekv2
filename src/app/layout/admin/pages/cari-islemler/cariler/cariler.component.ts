@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./cariler.component.scss']
 })
 export class CarilerComponent {
-
+ products: any[] = [
+  
+ ]
 }

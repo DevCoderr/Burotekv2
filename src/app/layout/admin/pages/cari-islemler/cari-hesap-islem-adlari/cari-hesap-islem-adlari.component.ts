@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./cari-hesap-islem-adlari.component.scss']
 })
 export class CariHesapIslemAdlariComponent {
-
+  products: any[] = [
+  
+  ]
 }

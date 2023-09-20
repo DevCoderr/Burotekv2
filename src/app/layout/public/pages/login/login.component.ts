@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LayoutService } from 'src/app/core/services/app.layout.service';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
     selector: 'app-login',

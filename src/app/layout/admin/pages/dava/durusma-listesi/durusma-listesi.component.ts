@@ -6,5 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./durusma-listesi.component.scss']
 })
 export class DurusmaListesiComponent {
+  selectedValues: string[] = [];
 
+  products: any[] = [
+    {
+      Id:1,
+      name: 'Adem ÇİÇEK',
+      TcNo:"	36996324269	",
+      barosicilno:"234",
+      kullanicitipi:"Admin",
+      ceptelno:" 5064110998",
+      kayittarihi:"28/10/2000",
+      yasaltemsilci:"Veli",
+      tuzelkisiadi:"dendene"
+    },
+    {
+      Id:2,
+      name: 'Büşra Çakmak',
+      TcNo:"	36996324269	",
+      barosicilno:"234",
+      kullanicitipi:"Buro Yöneticisi",
+      ceptelno:" 5064110998",
+      kayittarihi:"28/10/2000"
+    },
+  ]
 }

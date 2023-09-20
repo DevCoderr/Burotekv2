@@ -1,1 +1,67 @@
-<p>dava-listesi works!</p>
+<div class="card">
+    <h5>Advanced</h5>
+    <div class="formgrid grid">
+        <div class="field col-12 md:col-6">
+            <label for="firstname6">Dosya No</label>
+            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Dava Durum
+            </label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="firstname6">Dosya Esas No</label>
+            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Taraf Ad Soyad</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="firstname6">Klasör No</label>
+            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Kurum</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="state">Dava Türü</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Dava Tarihi</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="state">Suç Türü</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
+        </div>
+        <div style="display: flex;">
+            <label for="val1">Kilitli Olanlar</label>
+            <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
+            <label for="val1">Dava Arşivine Kaldırılanlar</label>
+            <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
+
+        </div>
+        <div class="button">
+            <p-button label="Yeni Kayıt" styleClass="p-button-rounded p-button-secondary pi pi-plus"></p-button>
+            <p-button label="Yazdır" styleClass="p-button-rounded p-button-primary pi pi-print"></p-button>
+            <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
+
+        </div>
+    </div>
+</div>

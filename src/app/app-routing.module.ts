@@ -15,7 +15,7 @@ import { KullaniciIslemleriComponent } from './layout/admin/pages/yonetim-paneli
                 redirectTo:'login'
             },
             { path:'',loadChildren:()=>import('./layout/public/public.module').then(m=>m.PublicModule)  },
-            {path:'admin', loadChildren: () => import('./layout/admin/admin.module').then(m => m.AdminModule) },
+            {path:'admin', loadChildren: () => import('./layout/admin/AdminModule').then(m => m.AdminModule) },
             {
                 path:'buroTek',
                 component:AppLayoutComponent,

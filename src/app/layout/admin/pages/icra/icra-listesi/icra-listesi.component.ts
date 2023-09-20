@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./icra-listesi.component.scss']
 })
 export class IcraListesiComponent {
-
+  selectedValues: string[] = [];
 }

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./yayinlar.component.scss']
 })
 export class YayinlarComponent {
+ products : any [] = [
 
+ ]
 }

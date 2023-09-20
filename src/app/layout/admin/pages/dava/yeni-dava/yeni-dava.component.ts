@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @Component({
   selector: 'app-yeni-dava',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./yeni-dava.component.scss']
 })
 export class YeniDavaComponent {
-
+  selectedValues: string[] = [];
 }

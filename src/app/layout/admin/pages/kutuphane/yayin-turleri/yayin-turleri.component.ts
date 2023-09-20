@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./yayin-turleri.component.scss']
 })
 export class YayinTurleriComponent {
-
+ products : any []
 }

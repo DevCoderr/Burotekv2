@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./icra-daire-islemleri.component.scss']
 })
 export class IcraDaireIslemleriComponent {
-
+ icra: any[] = [
+  {
+    id:"1",
+    name:"401 icra dairesi",
+    iban : "TR62 0006 2298 1487 8778 5525 68",
+  },
+  {
+    id:"2",
+    name:"401 icra dairesi",
+    iban : "TR62 0006 2298 1487 8778 5525 68",
+  }
+ ]
 }

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./odunc-yayinlar-listesi.component.scss']
 })
 export class OduncYayinlarListesiComponent {
-
+ products : any [] = [
+  
+ ]
 }

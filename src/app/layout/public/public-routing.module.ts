@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './pages/sifremi-unuttum/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { HakkimizdaComponent } from './pages/hakkimizda/hakkimizda.component';
 import { BasvuruGirisComponent } from './pages/basvuru-giris/basvuru-giris.component';
@@ -9,6 +9,7 @@ import { OdemeBilgileriComponent } from './pages/basvuru-giris/odeme-bilgileri/o
 import { AvukatBilgileriComponent } from './pages/basvuru-giris/avukat-bilgileri/avukat-bilgileri.component';
 import { SifremiUnuttumComponent } from './pages/sifremi-unuttum/sifremi-unuttum.component';
 import { AnasayfaComponent } from '../admin/pages/anasayfa/anasayfa.component';
+
 
 const routes: Routes = [
 

@@ -1,1 +1,73 @@
-<p>yeni-danisma works!</p>
+<div class="card">
+    <h5>Advanced</h5>
+    <div class="formgrid grid">
+        <div class="field col-12 md:col-6">
+            <label for="firstname6">İlgili Avukat</label>
+            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="state">Hzimet Tipi</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Büroda Sözlü Danışma</option>
+                <option>Yazılı Danışma</option>
+                <option>Büro Dışında Sözlü Danışma</option>
+                <option>İhtarname, İhbarname Düzenleme</option>
+                <option>Sözleşme Düzenlemesi</option>
+                <option>Ceza Soruşturması</option>
+                <option>Arabuluculuk Vekilliği</option>
+                <option>Disiplin Soruşturması</option>
+                <option>İdari Başvuru</option>
+                <option>Uzlaştırma Dosyası</option>
+                <option>Noterlik Tespiti</option>
+                <option>İtiraz/Müdahale Dilekçesi</option>
+            </select>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Konu</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-6">
+            <label for="address">Delil</label>
+            <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+        </div>
+        <div class="field col-6">
+            <label for="address">Açıklama</label>
+            <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+        </div>
+        <div class="field col-6">
+            <label for="address">Talepler</label>
+            <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Büro Danışma No</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">İlgili Kurum</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Kilitle</label>
+            <span style="margin-left: 10px;"></span>
+            <p-checkbox name="groupname" value="val1 " [(ngModel)]="selectedValues"></p-checkbox>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Kurum No</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Anlaşma Tutarı</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Arşive Kaldır</label>
+            <span style="margin-left: 10px;"></span>
+            <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
+        </div>
+        <div class="button">
+            <p-button label="Kaydet" styleClass="p-button-rounded p-button-success pi pi-plusdd"></p-button>
+            <p-button label="Geri" styleClass="p-button-rounded  p-button-secondary pi pi-arrow-circle-left
+            "></p-button>
+        </div>
+    </div>
+</div>

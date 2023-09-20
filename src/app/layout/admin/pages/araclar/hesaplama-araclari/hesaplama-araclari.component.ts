@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hesaplama-araclari.component.scss']
 })
 export class HesaplamaAraclariComponent {
-
+  selectedOption: string = 'vekalet';
 }

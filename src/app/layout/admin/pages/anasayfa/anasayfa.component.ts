@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AnasayfaComponent {
   constructor(private router: Router) {}
-  isMenuOpen: boolean = false; // Yan menünün başlangıçta kapalı olduğunu varsayalım
+  isMenuOpen: boolean = false; 
 
 
 
@@ -17,6 +17,4 @@ export class AnasayfaComponent {
     console.log(url);
     this.router.navigate(['main/'+route]);
   }
-
 }
-

@@ -1,1 +1,54 @@
-<p>kurum-islemleri works!</p>
+<div class="col-12 xl:col-12">
+    <h6>Kurum İşlemleri</h6>
+    <div class="card">    
+        <div class="card">
+            <div class="formgrid grid">
+                <div class="field col">
+                    <label for="firstname2">Kurum Adı</label>
+                    <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                </div>
+                <div class="field col">
+                    <label for="state">Kurum Türü</label>
+                        <select  id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                            
+                            <option>Cumhuriyet Savcılıkları</option>
+                            <option>Ceza Mahkemesi</option>
+                            <option>Diğer Resmi Kurumlar</option>
+                            <option>Hukuk Mahkemesi</option>
+                            <option>İcra Müdürlükleri</option>
+                            <option>Kolluk Birimi</option>
+                            <option>Meslek Kuruluşu</option>
+                            <option>Vergi Mahkemesi</option>
+                            <option>Yüksek Yargı</option>
+                        </select>
+                </div>
+            </div>
+            <div>
+                <p-button label="Yeni Kayıt" styleClass="p-button-rounded p-button-secondary pi pi-plus"></p-button>
+                <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
+            </div>
+            <div class="asd" style="margin-top: 9vh; max-width: 100%;">
+                <p-table [value]="products" [paginator]="true" [rows]="14" responsiveLayout="scroll"> 
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>No</th>
+                            <th>Kurum Adı</th>
+                            <th>Türü</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td style="width: 35%; min-width: 2rem;">{{product.Id}}</td>
+                            <td style="width: 35%; min-width: 8rem;">{{product.kurumadi}}</td>
+                            <td style="width: 35%; min-width: 8rem;">{{product.turu}}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+
+            
+
+        </div>
+        
+    </div>
+</div>

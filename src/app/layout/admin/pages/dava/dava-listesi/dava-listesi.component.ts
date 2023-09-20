@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./dava-listesi.component.scss']
 })
 export class DavaListesiComponent {
-
+  selectedValues: string[] = [];
 }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AdminRoutingModule } from './admin-routing.module';
 import { AnasayfaComponent } from './pages/anasayfa/anasayfa.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
@@ -9,7 +8,6 @@ import { KullaniciIslemleriComponent } from './pages/yonetim-paneli/kullanici-is
 import { BuroIslemleriComponent } from './pages/yonetim-paneli/buro-islemleri/buro-islemleri.component';
 import { PrimengModule } from '../shared/modules/primeng.module';
 import { KisiIslemleriComponent } from './pages/kisi-islemleri/kisi-islemleri.component';
-import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/modules/shared.module';
 import { DavaComponent } from './pages/dava/dava.component';
@@ -55,6 +53,18 @@ import { KullanimKilavuzlariComponent } from './pages/iletisim/kullanim-kilavuzl
 import { YardimVideolariComponent } from './pages/iletisim/yardim-videolari/yardim-videolari.component';
 import { YayinlarComponent } from './pages/kutuphane/yayinlar/yayinlar.component';
 import { YayinTurleriComponent } from './pages/kutuphane/yayin-turleri/yayin-turleri.component';
+import { MuvekkillerComponent } from './pages/kisi-islemleri/muvekkiller/muvekkiller.component';
+import { KarsiTarafComponent } from './pages/kisi-islemleri/karsi-taraf/karsi-taraf.component';
+import { DigerKisilerComponent } from './pages/kisi-islemleri/diger-kisiler/diger-kisiler.component';
+import { KisiListesiComponent } from './pages/kisi-islemleri/kisi-listesi/kisi-listesi.component';
+import { NotListesiComponent } from './pages/notlar/not-listesi/not-listesi.component';
+import { YapilacakIslerListesiComponent } from './pages/notlar/yapilacak-isler-listesi/yapilacak-isler-listesi.component';
+import { YeniEvrakComponent } from './pages/evrak/yeni-evrak/yeni-evrak.component';
+import { EvrakComponent } from './pages/evrak/evrak.component';
+import { EvrakIslemleriComponent } from './pages/evrak/evrak-islemleri/evrak-islemleri.component';
+import { BelgeTuruIslemleriComponent } from './pages/evrak/belge-turu-islemleri/belge-turu-islemleri.component';
+
+
 
 
 @NgModule({
@@ -64,13 +74,20 @@ import { YayinTurleriComponent } from './pages/kutuphane/yayin-turleri/yayin-tur
     YonetimPaneliComponent,
     BuroIslemleriComponent,
     KullaniciIslemleriComponent,
+    KarsiTarafComponent,
+    KurumIslemleriComponent,
     KisiIslemleriComponent,
     DavaComponent,
+    EvrakIslemleriComponent,
+    BelgeTuruIslemleriComponent,
     IcraComponent,
+    KisiListesiComponent,
     CariIslemlerComponent,
     ArsivComponent,
+    YeniEvrakComponent,
     DemirbasComponent,
     KutuphaneComponent,
+    DigerKisilerComponent,
     AraclarComponent,
     IletisimComponent,
     DanismaComponent,
@@ -78,6 +95,8 @@ import { YayinTurleriComponent } from './pages/kutuphane/yayin-turleri/yayin-tur
     DanismaListesiComponent,
     YeniDavaComponent,
     DavaListesiComponent,
+    NotListesiComponent,
+    YapilacakIslerListesiComponent,
     KurumIslemleriComponent,
     DurusmaListesiComponent,
     YeniIcraComponent,
@@ -86,6 +105,7 @@ import { YayinTurleriComponent } from './pages/kutuphane/yayin-turleri/yayin-tur
     YeniTahsilatComponent,
     CariIslemGecmisiComponent,
     CarilerComponent,
+    MuvekkillerComponent,
     CariHesapIslemAdlariComponent,
     YeniOdemeComponent,
     ArsivListesiComponent,
@@ -110,12 +130,13 @@ import { YayinTurleriComponent } from './pages/kutuphane/yayin-turleri/yayin-tur
     YayinTurleriComponent
   ],
   imports: [
+    CommonModule,
+    PrimengModule,
     SharedModule,
     ReactiveFormsModule,
     FormsModule,
     AdminRoutingModule,
-    PrimengModule,
-    CommonModule
   ]
 })
-export class AdminModule { }
+export class AdminModule {
+}

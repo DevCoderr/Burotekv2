@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./yeni-icra.component.scss']
 })
 export class YeniIcraComponent {
-
+  selectedValues: string[] = [];
 }

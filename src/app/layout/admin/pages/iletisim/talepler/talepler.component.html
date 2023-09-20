@@ -1,1 +1,75 @@
-<p>talepler works!</p>
+<h5>Talep Listesi</h5>
+<div class="card">
+    <div class="formgrid grid">
+        <div class="field col-12 md:col-6">
+            <label for="state">Talep Durumu</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Talep Eden Kişi</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="state">Talep Türü</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="city">Talep Konusu</label>
+            <input id="city" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="city">Tarihi Aralığı:</label>
+            <input id="city" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+    </div>
+    <div>
+        <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
+        <p-button label="Yeni Kayıt" styleClass="p-button-rounded pi pi-plus"></p-button>
+    </div>
+    <div class="asd" style="margin-top: 9vh; max-width: 100%;">
+        <p-table [value]="products" [paginator]="true" [rows]="6" responsiveLayout="scroll"> 
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>No</th>
+                    <th>Talep Durumu</th>
+                    <th>Talep Türü</th>
+                    <th>Talep Tarihi</th>
+                    <th>Talep Eden Kullanıcı</th>
+                    <th>Talep Konusu</th>
+                    <th>Talep</th>
+                    <th>Talep Cevabı</th>
+                    <th>Talebin Cevaplanma Tarihi</th>
+                    <th>Talebi Cevaplayan Kişi</th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td style="width: 35%; min-width: 2rem;">{{product.Id}}</td>
+                    <td style="width: 35%; min-width: 8rem;">{{product.name}}</td>
+                    <td style="width: 35%; min-width: 8rem;">{{product.burosirano}}</td>
+                    <td style="width: 35%; min-width: 8rem;">{{product.kullanicitipi}}</td>
+                    <td style="width: 35%; min-width: 8rem;">{{product.tuzelkisiadi}}</td>
+                    <td style="width: 15%; min-width: 8rem;">{{product.TcNo}}</td>
+                    <td style="width: 35%; min-width: 8rem;">{{product.ceptelno}}</td>
+                    <td style="width: 35%; min-width: 1rem;">
+                        <button pButton pRipple type="button" icon="pi pi-ticket" class="p-button p-component p-button-text p-button-icon-only"></button>
+
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./demirbas-listesi.component.scss']
 })
 export class DemirbasListesiComponent {
-
+ products : any [] = [
+  
+ ]
 }

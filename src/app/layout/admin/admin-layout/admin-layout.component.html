@@ -5,10 +5,18 @@
     </div>
     <div class="layout-main-container">
         <div class="layout-main">
-            <router-outlet></router-outlet>
+            <div class="flex flex-column gap-2">
+
+                <app-breadcrumbs></app-breadcrumbs>
+                <div class=" card surface-card border-round" >
+    
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
         </div>
         <app-footer></app-footer>
     </div>
     <app-config></app-config>
     <div class="layout-mask"></div>
 </div>
+

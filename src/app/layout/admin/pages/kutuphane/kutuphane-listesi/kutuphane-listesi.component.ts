@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./kutuphane-listesi.component.scss']
 })
 export class KutuphaneListesiComponent {
-
+ products : any [] = [
+  
+ ]
 }

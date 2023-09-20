@@ -1,1 +1,59 @@
-<p>icra-listesi works!</p>
+
+
+<h5>İcra Listesi</h5>
+<div class="card">
+    <div class="formgrid grid">
+        <div class="field col-12 md:col-6">
+            <label for="firstname6">Ad Soyad</label>
+            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-3">
+            <label for="state">Durum</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Özel Föy Mo</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Takip Tarihi</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Dosya No</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="md:col-6">
+            <label for="lastname6">Arşive Kaldırılanlar</label>
+            <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
+        </div>
+        <div class="field col-12 md:col-6">
+            <label for="state">Takip Yolu Türü</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Arizona</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
+        </div>
+        <div class="md:col-6">
+            <label for="lastname6">Kilitli Olanlar</label>
+            <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
+        </div>
+        <div class="buttons" style="float: right;margin: 0px;float: right;margin-right: 0px;">
+            <p-button label="Yeni Kayıt" styleClass="p-button-rounded p-button-secondary pi pi-plus"></p-button>
+            <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
+            <p-button label="Yazdır" styleClass="p-button-rounded p-button-primary pi pi-print"></p-button>
+        </div>
+    </div>
+    
+
+</div>
+

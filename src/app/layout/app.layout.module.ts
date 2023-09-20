@@ -9,9 +9,12 @@ import { SharedModule } from './shared/modules/shared.module';
 import { PublicModule } from './public/public.module';
 import { PrimengModule } from './shared/modules/primeng.module';
 
+
 @NgModule({
     declarations: [
         AppLayoutComponent,
+
+
     ],
     imports: [
         BrowserModule,
@@ -22,6 +25,7 @@ import { PrimengModule } from './shared/modules/primeng.module';
         SharedModule,
         PublicModule,
         PrimengModule,
+
     ],
     exports: [AppLayoutComponent]
 })

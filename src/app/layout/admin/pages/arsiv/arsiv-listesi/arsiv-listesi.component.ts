@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./arsiv-listesi.component.scss']
 })
 export class ArsivListesiComponent {
-
+  products : any [] = []
 }

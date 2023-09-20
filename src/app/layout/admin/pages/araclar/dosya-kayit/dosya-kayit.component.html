@@ -1,1 +1,34 @@
-<p>dosya-kayit works!</p>
+<h5>Dosya Bilgileri</h5>
+<div class="card">
+    <h5>Lütfen bilgileri eksiksiz giriniz.</h5>
+    <div class="formgrid grid">
+        <div class="field col-12 md:col-12">
+            <label for="state">Dilekçe Türü *</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>asdasd</option>
+                <option>Califoasdasdrnia</option>
+                <option>Flosadasdrida</option>
+                <option>Ohasdasdio</option>
+                <option>sdasdsaddsa</option>
+            </select>
+        </div>
+        <div class="field col-12 md:col-12">
+        <label tooltip="Yeni dosya yüklemek için tıklayınız." for="fileupload" class="btn btn-primary">
+            <input class="hide ng-isolate-scope" type="file" id="fileupload" name="fileupload" fileread="$scope.Dosya.DosyaBase64" accept="image/x-png, image/gif, image/jpeg, application/*">
+            <i class="fa fa-cloud-upload"></i>&nbsp;Yeni Dosya Yükle
+        </label>
+    </div>
+        <div class="field col-12 md:col-12">
+            <label for="lastname6">Dosya Adı *</label>
+            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col-12">
+            <label for="address">Açıklama</label>
+            <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+        </div>
+    </div>
+    <div>
+        <p-button label="Kaydet" styleClass="p-button-rounded p-button-success pi pi-save"></p-button>
+        <p-button label="Geri" styleClass="p-button-rounded p-button-secondary pi-arrow-circle-left"></p-button>
+    </div>
+</div>

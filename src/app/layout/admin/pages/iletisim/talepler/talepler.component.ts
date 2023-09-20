@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./talepler.component.scss']
 })
 export class TaleplerComponent {
-
+ products : [] = []
 }
