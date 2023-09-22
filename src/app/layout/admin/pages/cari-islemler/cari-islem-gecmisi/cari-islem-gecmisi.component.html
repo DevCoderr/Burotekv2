@@ -4,7 +4,7 @@
     <div class="formgrid grid">
         <div class="field col-12 md:col-6">
             <label for="firstname6">Cari Hesap Kodu</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Cari
@@ -15,9 +15,13 @@
             <label for="firstname6">Hesap Adı</label>
             <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="firstname6">Cari Tarihi</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <div class="field col-6" style="margin-left: 0px;">
+            <label for="lastname4">Cari Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '48.7%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Açıklama</label>
@@ -33,7 +37,7 @@
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Dava Dosya Esas No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Karşı Taraf
@@ -42,7 +46,7 @@
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">İcra Dosya No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">İşlem Yapan</label>

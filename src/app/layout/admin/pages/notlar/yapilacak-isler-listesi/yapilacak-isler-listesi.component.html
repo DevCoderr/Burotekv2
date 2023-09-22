@@ -16,15 +16,21 @@
                     <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                 </div>
                 <div class="field col">
-                    <label for="lastname2">Tarihi</label>
-                    <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                    <label for="lastname3">Tarih</label>
+                    <div class="text-base text-color surface-overlay     appearance-none outline-none focus:border-primary w-full">
+                       <div style="height: 10px;">
+                        <p-calendar  
+                        [style]="{'width': '100%','display': 'inline-flex','height':'34px'}"[(ngModel)]="date"></p-calendar>
+                    </div>
+                    </div>
                 </div>
             </div>
-            <div class="buttons" style="float: right;margin: 0px;float: right;margin-right: 0px;">
+            <div>
                 <p-button label="Yeni Kayıt" styleClass="p-button-rounded p-button-secondary pi pi-plus"></p-button>
                 <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
                 <p-button label="Yazdır" styleClass="p-button-rounded p-button-primary pi pi-print"></p-button>
             </div>
+            
 
             <div class="asd" style="margin-top: 9vh; max-width: 100%;">
                 <p-table [value]="products" [paginator]="true" [rows]="6" responsiveLayout="scroll"> 

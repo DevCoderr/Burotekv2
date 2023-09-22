@@ -63,6 +63,7 @@ import { YeniEvrakComponent } from './pages/evrak/yeni-evrak/yeni-evrak.componen
 import { EvrakComponent } from './pages/evrak/evrak.component';
 import { EvrakIslemleriComponent } from './pages/evrak/evrak-islemleri/evrak-islemleri.component';
 import { BelgeTuruIslemleriComponent } from './pages/evrak/belge-turu-islemleri/belge-turu-islemleri.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 
@@ -136,6 +137,7 @@ import { BelgeTuruIslemleriComponent } from './pages/evrak/belge-turu-islemleri/
     ReactiveFormsModule,
     FormsModule,
     AdminRoutingModule,
+    FullCalendarModule
   ]
 })
 export class AdminModule {

@@ -3,7 +3,7 @@
     <div class="formgrid grid">
         <div class="field col-12 md:col-6">
             <label for="firstname6">IBAN No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">İcra Dairesi Adı</label>

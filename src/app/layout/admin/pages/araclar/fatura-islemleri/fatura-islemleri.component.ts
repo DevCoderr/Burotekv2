@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class FaturaIslemleriComponent {
  products : any [] = []
+ date1 : Date | undefined ;
 }

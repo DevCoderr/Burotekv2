@@ -8,9 +8,8 @@
                 </div>
 
                 <div>
-                    <label for="email1" class="block text-900 text-xl font-medium mb-2">TC Kimlik No</label>
-                    <input id="email1" type="text" placeholder="TC Kimlik No" pInputText class="w-full p-3 md:w-30rem mb-5" style="padding:1rem">
-
+                    <label for="tcKimlikNo">TC Kimlik No</label>
+                    <input   id="tcKimlikNo"  type="text" placeholder="TC Kimlik No" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-3 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                     <label for="password1" class="block text-900 text-xl font-medium  mb-2">Şifre</label>
                     <p-password id="password1" [(ngModel)]="password" placeholder="Şifre" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem"></p-password>
 

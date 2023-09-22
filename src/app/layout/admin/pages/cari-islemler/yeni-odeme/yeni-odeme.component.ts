@@ -10,6 +10,14 @@ import { CheckboxModule } from 'primeng/checkbox';
 export class YeniOdemeComponent {
   formGroup: FormGroup | undefined;
 
+  allowNumericDigitsOnlyOnKeyUp(e) {		
+    const charCode = e.which ? e.which : e.keyCode;
+    
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      e.preventDefault();
+    }
+  }
+
   ngOnInit() {
       this.formGroup = new FormGroup({
           city: new FormControl<string | null>(null)

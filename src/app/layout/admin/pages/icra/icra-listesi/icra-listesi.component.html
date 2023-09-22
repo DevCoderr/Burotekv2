@@ -19,19 +19,23 @@
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Özel Föy Mo</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="lastname6">Takip Tarihi</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <div class="field col-6" style="margin-left: 0px;">
+            <label for="lastname4">Takip Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '48.7%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Dosya No</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="md:col-6">
-            <label for="lastname6">Arşive Kaldırılanlar</label>
-            <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
+        <div class="flex align-items-center gap-4" style="margin: 15px;">
+            <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+            <label for="ny">Arşive Kaldırılanlar</label>
         </div>
         <div class="field col-12 md:col-6">
             <label for="state">Takip Yolu Türü</label>
@@ -43,15 +47,17 @@
                 <option>Washington</option>
             </select>
         </div>
-        <div class="md:col-6">
-            <label for="lastname6">Kilitli Olanlar</label>
-            <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
+        <div class="flex align-items-center gap-4"  style="margin: 15px;">
+            <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+            <label for="ny">Kilitli Olanlar</label>
         </div>
-        <div class="buttons" style="float: right;margin: 0px;float: right;margin-right: 0px;">
-            <p-button label="Yeni Kayıt" styleClass="p-button-rounded p-button-secondary pi pi-plus"></p-button>
-            <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
-            <p-button label="Yazdır" styleClass="p-button-rounded p-button-primary pi pi-print"></p-button>
-        </div>
+        
+    </div>
+    <p></p>
+    <div>
+        <p-button label="Yeni Kayıt" styleClass="p-button-rounded p-button-secondary pi pi-plus"></p-button>
+        <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
+        <p-button label="Yazdır" styleClass="p-button-rounded p-button-primary pi pi-print"></p-button>
     </div>
     
 

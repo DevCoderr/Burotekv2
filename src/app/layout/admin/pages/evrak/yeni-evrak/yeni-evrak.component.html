@@ -2,14 +2,24 @@
     <h6>Evrak Bilgileri</h6>
     <div class="card">
         <div class="formgrid grid">
-                <div class="field col">
-                    <label for="firstname2">Evrak Türü</label>
-                    <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-                </div>
-                <div class="field col">
-                    <label for="lastname2">Belge Türü</label>
-                    <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-                </div>
+            <div class="field col-12 md:col-6">
+                <label for="state">Evrak Türü</label>
+                <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                    <option>Lütfen Seçiniz</option>
+                    <option>Gelen Evrak</option>
+                    <option>Giden Evrak</option>
+
+                </select>
+            </div>
+            <div class="field col-12 md:col-6">
+                <label for="state">
+                    Belge Türü</label>
+                <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                    <option>Lütfen Seçiniz</option>
+                    <option>Duruşma Günü Tebliği</option>
+                    <option>Tahliye Belgesi</option>
+                </select>
+            </div>
         </div>   
             <div class="formgrid grid">
                     <div class="field col">
@@ -25,39 +35,39 @@
         <div class="formgrid grid">
             <div class="field col">
                 <label for="firstname2">Bağlantılı Büro Dosya No</label>
-                <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             </div>
             <div class="field col">
                 <label for="lastname2">Konu</label>
                 <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             </div>
         </div>
-        <div class="formgrid grid">
-            <div class="field col">
-                <label for="firstname2">Belge Kayıt Tarihi</label>
-                <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <div class="field col-12" style="margin-left: -12px;">
+            <label for="lastname3">Belge Kayıt Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 10px;">
+                    <p-calendar [style]="{'width': '50%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date1" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
             </div>
-            <div class="field col">
-                <label for="address">Açıklama</label>
-                <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
+            <div class="field col-6">
+        
             </div>
         </div>
         <div class="formgrid grid">
             <div class="field col">
                 <label for="firstname2">Kurum Belge No</label>
-                <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             </div>
             <div class="field col">
 
             </div>
         </div>
-        <div class="formgrid grid">
-            <div class="field col">
-                <label for="firstname2">Kurum Belge Tarihi</label>
-                <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-            </div>
-            <div class="field col">
-                
+        <div class="field col-12" style="margin-left: -12px;">
+            <label for="lastname4">Kurum Belge Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '50%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date2" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
             </div>
         </div>
         <div>

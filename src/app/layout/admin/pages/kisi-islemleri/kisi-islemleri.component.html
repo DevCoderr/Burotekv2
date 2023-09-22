@@ -5,23 +5,33 @@
             <div class="formgrid grid">
                 <div class="field col">
                     <label for="firstname2">TC Kimlik No</label>
-                    <input id="firstname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                    <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                 </div>
                 <div class="field col">
                     <label for="lastname2">Ad Soyad</label>
                     <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                 </div>
-                <div class="field col">
-                    <label for="lastname2">Kullanıcı Tipi</label>
-                    <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                <div class="field col-12 md:col-3">
+                    <label for="state">Kişi Türü</label>
+                    <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                        <option>Lütfen Kişi Türünü Seçiniz.</option>
+                        <option>Hepsi</option>
+                        <option>Müvekkil</option>
+                        <option>Karşı Taraf</option>
+                        <option>Diğer</option>
+                    </select>
                 </div>
                 <div class="field col">
                     <label for="lastname2">Sıra No</label>
-                    <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                    <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="5"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
                 </div>
                 <div class="field col" *ngIf="tip == 'kisilistesi'">
                     <label for="lastname2">Kişi Tipi</label>
-                    <input id="lastname2" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                    <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                        <option>Gerçek Kişi</option>
+                        <option>Tüzel Kişi</option>
+                        <option>Kamu Tüzel Kişiliği</option>
+                    </select>
                 </div>
             </div>
             <div class="buttons" style="float: right;margin: 0px;float: right;margin-right: 0px;">

@@ -8,6 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./yeni-evrak.component.scss']
 })
 export class YeniEvrakComponent {
+
+  allowNumericDigitsOnlyOnKeyUp(e) {		
+    const charCode = e.which ? e.which : e.keyCode;
+    
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      e.preventDefault();
+    }
+  }
+  date1: Date | undefined;
+  date2: Date | undefined;
   [x: string]: any;
   constructor(private router: Router) {}
   isMenuOpen: boolean = false; 

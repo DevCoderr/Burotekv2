@@ -40,30 +40,32 @@
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Büro Danışma No</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input   id="tcKimlikNo"  type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">İlgili Kurum</label>
             <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="lastname6">Kilitle</label>
-            <span style="margin-left: 10px;"></span>
-            <p-checkbox name="groupname" value="val1 " [(ngModel)]="selectedValues"></p-checkbox>
-        </div>
+        
         <div class="field col-12 md:col-6">
             <label for="lastname6">Kurum No</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input   id="tcKimlikNo"  type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Anlaşma Tutarı</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input   id="tcKimlikNo"  type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Arşive Kaldır</label>
             <span style="margin-left: 10px;"></span>
             <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
         </div>
+        <div class="field col-12 md:col-6">
+            <label for="lastname6">Kilitle</label>
+            <span style="margin-left: 10px;"></span>
+            <p-checkbox name="groupname" value="val1 " [(ngModel)]="selectedValues"></p-checkbox>
+        </div>
+        
         <div class="button">
             <p-button label="Kaydet" styleClass="p-button-rounded p-button-success pi pi-plusdd"></p-button>
             <p-button label="Geri" styleClass="p-button-rounded  p-button-secondary pi pi-arrow-circle-left

@@ -1,9 +1,9 @@
+<h5>Dava Bilgileri</h5>
 <div class="card">
-    <h5>Advanced</h5>
     <div class="formgrid grid">
         <div class="field col-12 md:col-6">
             <label for="firstname6">Dosya No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Mahkeme</label>
@@ -15,51 +15,81 @@
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Soruşturma No</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
-            <label for="firstname6">Dava Türü</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <label for="state">Dava Türü</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto" >
+                <option>Lütfen Dava Türü Adını Yazınız...</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Danışma</label>
             <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
-            <label for="lastname6">Suç Türü</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <label for="state">Suç Türü</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Lütfen Suç Türünü Yazınız.</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
+        </div>
+        <div class="field col-6" style="margin-left: 0px;">
+            <label for="lastname4">İtiyaz Temin Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '48.7%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date1" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
         </div>
         <div class="field col-12 md:col-6">
-            <label for="firstname6">İtiraz Temyiz Tarihi</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-        </div>
-        <div class="field col-12 md:col-6">
-            <label for="lastname6">Dava Durum</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <label for="state">Dava Durum</label>
+            <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
+                <option>Lütfen Dava Durumunu Yazınız.</option>
+                <option>California</option>
+                <option>Florida</option>
+                <option>Ohio</option>
+                <option>Washington</option>
+            </select>
         </div>
         <div class="field col-6">
             <label for="address">İtiraz Temyiz Açıklama</label>
             <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="firstname6">Dava Tarihi</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-        </div> 
+        <div class="field col-6" style="margin-left: 0px;">
+            <label for="lastname4">Dava Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '48.7%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date2" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
+        </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Klasör No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
          <div class="field col-12 md:col-6">
             <label for="firstname6">Dosya Esas No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-         <div class="field col-12 md:col-6">
-            <label for="firstname6">Kesinleşme Tarihi</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-        </div> 
+        <div class="field col-6" style="margin-left: 0px;">
+            <label for="lastname4">Kesinleşme Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '48.7%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date3" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
+        </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Karar No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-6">
             <label for="address">Kesinleşme Karar Özeti</label>
@@ -67,7 +97,7 @@
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Temyiz Esas No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-6">
             <label for="address">Kesinleşme Karar Özeti</label>
@@ -79,11 +109,15 @@
         </div>
         <div class="field col-12 md:col-6">
             <label for="firstname6">Temyiz Karar No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="firstname6">Karar Tarihi</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <div class="field col-6" style="margin-left: 0px;">
+            <label for="lastname4">Karar Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '48.7%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date4" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
         </div>
         <div class="field col-6">
             <label for="address">Açıklama</label>
@@ -97,25 +131,22 @@
             <label for="address">Karar Özeti</label>
             <textarea id="address" type="text" rows="4" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"></textarea>
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="firstname6">Dava Arşivine Kaldır</label>
-            <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
-        </div>
-        <div class="field col-6 md:col-2">
+        <div class="field col-6 md:col-6">
             <label for="firstname6">Anlaşma Tutarı</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input   id="tcKimlikNo"  type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-       <div class="field col-6 md:col-6">
-            <label for="lastname6">Arşive Kaldır</label>
-            <span style="margin-left: 10px;"></span>
-            <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
+        <div class="flex align-items-center gap-4" style="margin: 15px;">
+        <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+        <label for="ny">Dava Arşivine Kaldır</label>
         </div>
-        <div class="buttons" style="float: right;margin: 0px;float: right;margin-right: 0px;">
-            <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
-            <p-button label="Yazdır" styleClass="p-button-rounded p-button-primary pi pi-print"></p-button>
+        <div class="flex align-items-center gap-4">
+            <p-checkbox name="group" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+            <label for="ny">Kilitle</label>
         </div>
-        
-
+    </div>
+    <div>
+        <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
+        <p-button label="Yazdır" styleClass="p-button-rounded p-button-primary pi pi-print"></p-button>
     </div>
         
     </div>

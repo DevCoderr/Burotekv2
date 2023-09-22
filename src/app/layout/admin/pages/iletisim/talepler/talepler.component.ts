@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class TaleplerComponent {
  products : [] = []
+ date1: Date | undefined;
+ date2: Date | undefined;
 }

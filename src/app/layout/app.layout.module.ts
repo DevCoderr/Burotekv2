@@ -25,6 +25,7 @@ import { PrimengModule } from './shared/modules/primeng.module';
         SharedModule,
         PublicModule,
         PrimengModule,
+        
 
     ],
     exports: [AppLayoutComponent]

@@ -1,53 +1,33 @@
 <div class="col-12 xl:col-12">
     <h5>Büro Bilgileri <small>Lütfen büro bilgilerini eksiksiz giriniz.</small> </h5>
     <div class="card">
-        <div class="field grid">
-            <label for="firstname4" class="col-12 mb-2 md:col-2 md:mb-0">Büro Adı</label>
-            <div class="col-12 md:col-10">
-                <input id="firstname4" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-            </div>
+      <div class="field grid">
+        <label for="lastname4" class="col-6 mb-2 md:col-2 md:mb-0">Büro Adı</label>
+        <div class="col-12 md:col-10">
+            <input id="lastname4" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="form-group">
-          <div  class="">
-            <label for="ilSelect">Büro İl</label>
-            <div>
-              <label for="ilSelect"></label>
-              <select
-                formControlName="buroIl"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-                id="ilSelect"
-                name="selectedIl"
-                [(ngModel)]="selectedIl"
-                placeholder="Lütfen bir il seçin"
-              >
-                <option *ngFor="let il of IlListesi" [value]="il.IL_ILCE_ID">
-                  {{ il.IL_ADI }}
-                </option>
-              </select>
-              <div *ngIf="submitted && f['buroIl'].errors" class="invalid-feedback">
-                <div *ngIf="f['buroIl'].value == 0">Bu alan boş bırakılamaz.</div>
-              </div>
-            </div>
-          </div>
     </div>
-          <div class="form-group" *ngIf="selectedIl">
-            <label for="exampleFormControlSelect1">Büro İlçe</label>
-            <div>
-              <label for="ilceSelect"></label>
-              <select
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
-                id="ilceSelect"
-                [(ngModel)]="selectedIlce"
-              >
-                <option
-                  *ngFor="let ilce of getIlceList(selectedIl.toString())"
-                  [value]="ilce"
-                >
-                  {{ ilce }}
-                </option>
-              </select>
-            </div>
-          </div>
+    <div class="col-10 " style="display: flex">
+      <label for="state">Büro İl</label>
+      <select id="state" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" >
+        <option >Lütfen Seçiniz</option>  
+        <option>Arizona</option>
+          <option>California</option>
+          <option>Florida</option>
+          <option>Ohio</option>
+          <option>Washington</option>
+      </select>
+  </div>
+  <div class="col-10 " style="display: flex ">
+    <label for="state">Büro İlçe</label>
+    <select id="state" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full ">
+        <option>Lütfen Seçiniz</option>
+        <option>California</option>
+        <option>Florida</option>
+        <option>Ohio</option>
+        <option>Washington</option>
+    </select>
+</div>
         <div class="field grid">
             <label for="lastname4" class="col-12 mb-2 md:col-2 md:mb-0">Adres</label>
             <div class="col-12 md:col-10">
@@ -57,13 +37,13 @@
         <div class="field grid">
             <label for="firstname4" class="col-12 mb-2 md:col-2 md:mb-0">Büro Telefon</label>
             <div class="col-12 md:col-10">
-                <input id="firstname4" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             </div>
         </div>
         <div class="field grid">
             <label for="lastname4" class="col-12 mb-2 md:col-2 md:mb-0">Büro Fax</label>
             <div class="col-12 md:col-10">
-                <input id="lastname4" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="4"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             </div>
         </div>
         <div class="field grid">
@@ -82,11 +62,8 @@
         <div class="field grid">
             <label for="lastname4" class="col-12 mb-2 md:col-2 md:mb-0">IBAN No</label>
             <div class="col-12 md:col-10">
-                <input id="lastname4" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+                <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="11"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             </div>
-        </div>
-        <div class="field grid">
-            <label for="lastname4" class="col-12 mb-2 md:col-2 md:mb-0">Seçenekler</label>
         </div>
         <div class="field grid">
             <label for="lastname4" class="col-12 mb-2 md:col-2 md:mb-0">SMS Başlık</label>
@@ -94,12 +71,14 @@
                 <input id="lastname4" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
             </div>
         </div>
-        <div class="field grid">
-            <label for="lastname4" class="col-12 mb-2 md:col-2 md:mb-0">Sekreterya Cari İşlemleri Görmesin</label>
-        </div>
-        <div class="button-a" style="float: right;margin: 0px;float: right;margin: -25px;margin-right: 0px;">
+        <form class="flex align-items-center gap-4" [formGroup]="formGroup">
+          <label for="ny">Pasif Kullanıcı Gösterme</label>
+          <p-checkbox formControlName="city" value="New York" inputId="ny"></p-checkbox>
+      </form>
+      <p></p>
+        <div>
           <p-button label="Kaydet" styleClass="p-button-rounded p-button-success"></p-button>
-          <p-button label="Geri " styleClass="p-button-rounded p-button-primary"></p-button>
+          <p-button label="Geri " styleClass="p-button-rounded p-button-secondary"></p-button>
         </div>
-</div>
-</div>
+      </div>
+    </div>

@@ -4,19 +4,23 @@
     <div class="formgrid grid">
         <div class="field col-12 md:col-6">
             <label for="firstname6">Dosya Esas No</label>
-            <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-        </div>
-        <div class="field col-12 md:col-6">
-            <label for="lastname6">Duruşma Tarihi</label>
-            <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+            <input id="firstname4" type="text" (keypress)="allowNumericDigitsOnlyOnKeyUp($event)"  [maxLength]="10"  class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
             <label for="lastname6">Müvekkil Adı</label>
             <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="lastname6">Arşive Kaldırılanlar</label>
-            <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
+        <div class="field col-12" style="margin-left: 0px;">
+            <label for="lastname4">Duruşma Tarihi</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+                <div style="height: 20px;">
+                    <p-calendar [style]="{'width': '48.7%','display': 'inline-flex','height':'34px'}" [(ngModel)]="date" dateFormat="dd.mm.yy"></p-calendar>
+                </div>
+            </div>
+        </div>
+        <div class="flex align-items-center gap-4" style="margin: 15px;">
+            <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+            <label for="ny">Arşive Kaldırılanlar</label>
         </div>
     </div>
     <div>

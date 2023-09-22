@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./evrak.component.scss']
 })
 export class EvrakComponent {
-
+  
 }

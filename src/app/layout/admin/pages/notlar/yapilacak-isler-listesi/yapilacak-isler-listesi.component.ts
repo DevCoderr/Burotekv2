@@ -8,11 +8,16 @@ import { CalendarModule } from 'primeng/calendar';
   styleUrls: ['./yapilacak-isler-listesi.component.scss']
 })
 export class YapilacakIslerListesiComponent {
+
+    date : Date;
+
+
+
     [x: string]: any;
     constructor(private router: Router) {}
     isMenuOpen: boolean = false; 
 
-  
+    
     products: any[] = [
       {
         Id:1,

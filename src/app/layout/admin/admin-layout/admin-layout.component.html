@@ -1,15 +1,22 @@
 <div class="layout-wrapper" [ngClass]="containerClass">
     <app-topbar></app-topbar>
-    <div class="layout-sidebar">
-        <app-sidebar></app-sidebar>
+    <div class="layout-sidebar" style="overflow: hidden">
+        <div
+            style="
+                height: 100%;
+                margin-right: -50px; /* Maximum width of scrollbar */
+                padding-right: 50px; /* Maximum width of scrollbar */
+                overflow-y: scroll;
+            "
+        >
+            <app-sidebar></app-sidebar>
+        </div>
     </div>
     <div class="layout-main-container">
         <div class="layout-main">
             <div class="flex flex-column gap-2">
-
                 <app-breadcrumbs></app-breadcrumbs>
-                <div class=" card surface-card border-round" >
-    
+                <div class="card surface-card border-round">
                     <router-outlet></router-outlet>
                 </div>
             </div>
@@ -19,4 +26,3 @@
     <app-config></app-config>
     <div class="layout-mask"></div>
 </div>
-

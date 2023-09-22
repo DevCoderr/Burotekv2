@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./danisma-listesi.component.scss']
 })
 export class DanismaListesiComponent {
+  selectedCities: string[] = [];
   selectedValues: string[] = [];
   constructor(private router: Router) {}
   isMenuOpen: boolean = false; 

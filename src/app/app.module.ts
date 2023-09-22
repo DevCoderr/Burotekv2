@@ -8,6 +8,7 @@ import { NotfoundComponent } from './demo/components/notfound/notfound.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrimengModule } from './layout/shared/modules/primeng.module';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PrimengModule } from './layout/shared/modules/primeng.module';
         CommonModule,
         NgbModule,
         PrimengModule,
+        FullCalendarModule
         
     ],
     providers: [

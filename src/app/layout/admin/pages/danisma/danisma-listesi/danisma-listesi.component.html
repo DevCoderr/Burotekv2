@@ -1,27 +1,27 @@
 <div class="card">
-    <h5>Advanced</h5>
+    <h5>Danışma Listesi</h5>
     <div class="formgrid grid">
         <div class="field col-12 md:col-6">
-            <label for="firstname6">Firstname</label>
+            <label for="firstname6">Ad Soyad</label>
             <input id="firstname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-12 md:col-6">
-            <label for="lastname6">Lastname</label>
+            <label for="lastname6">Karşı Taraf</label>
             <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
         <div class="field col-6">
-            <label for="address">Address</label>
+            <label for="address">Konu</label>
             <input id="lastname6" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="field col-12 md:col-2" style="margin: 8px; ;">
-            <label for="lastname6">Arşive Kaldırılanlar</label>
-            <span style="margin-left: 10px;"></span>
-            <p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
-
-            <label for="lastname6">Kilitli Olanlar</label>
-            <span style="margin-left: 10px;"></span>
-            <p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
-        </div>
+        <div class="flex align-items-center gap-4" style="margin: 20px;">
+            <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
+            <label for="ny">Arşive Kaldırılanlar</label>
+    </div>
+    
+    <div class="flex align-items-center gap-4" style="margin: 20px;">
+        <p-checkbox name="group1" value="San Francisco" [(ngModel)]="selectedCities" inputId="sf"></p-checkbox>
+        <label for="sf">Kilitli Olanlar</label>
+    </div>
     </div>
         <div class="button">
             <p-button label="Yeni Kayıt" styleClass="p-button-rounded p-button-secondary pi pi-plus"></p-button>

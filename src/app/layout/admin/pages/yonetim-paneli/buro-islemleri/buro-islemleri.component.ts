@@ -9,7 +9,21 @@ import { CheckboxModule } from 'primeng/checkbox';
   styleUrls: ['./buro-islemleri.component.scss']
 })
 export class BuroIslemleriComponent {
-    form: FormGroup = new FormGroup({
+  formGroup: FormGroup | undefined;
+
+    ngOnInit() {
+        this.formGroup = new FormGroup({
+            city: new FormControl<string | null>(null)
+        });
+    }
+    allowNumericDigitsOnlyOnKeyUp(e) {		
+      const charCode = e.which ? e.which : e.keyCode;
+      
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        e.preventDefault();
+      }
+    }
+  form: FormGroup = new FormGroup({
     buroAdi: new FormControl(''),
     buroIl: new FormControl(0),
     buroAdres: new FormControl(''),
@@ -410,30 +424,7 @@ export class BuroIslemleriComponent {
     this.form.reset();
   }
 
-  ngOnInit(): void {
-    localStorage.getItem('buroKayit');
-    city: new FormControl('')
-    this.form = this.fb.group({
-      buroAdi: ['', Validators.required],
-      buroIl: ['', [Validators.required]],
-
-      tel: ['', [Validators.required, Validators.minLength(11)]],
-      faks: ['', [Validators.required, Validators.minLength(5)]],
-
-      buroAdres: ['', [Validators.required]],
-      // password: [
-      //   '',
-      //   [
-      //     Validators.required,
-      //     Validators.minLength(6),
-      //     Validators.maxLength(40),
-      //   ],
-      // ],
-      // confirmPassword: ['', Validators.required],
-      // acceptTerms: [false, Validators.requiredTrue],
-    });
-  }
-
+  
   onIlSelectChange(event: any) {
     this.selectedIlId = parseInt(event.target.value);
     this.selectedIlceId = null as any;

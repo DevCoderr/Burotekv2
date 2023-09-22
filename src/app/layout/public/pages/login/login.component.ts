@@ -14,11 +14,27 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
         }
     `]
 })
+
+
 export class LoginComponent {
+
+    allowNumericDigitsOnlyOnKeyUp(e) {		
+        const charCode = e.which ? e.which : e.keyCode;
+        
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+          e.preventDefault();
+        }
+      }
+  
 
     valCheck: string[] = ['remember'];
 
     password!: string;
 
-    constructor(public layoutService: LayoutService) { }
+    constructor(public layoutService: LayoutService) {
+        
+     }
+
+
+    
 }

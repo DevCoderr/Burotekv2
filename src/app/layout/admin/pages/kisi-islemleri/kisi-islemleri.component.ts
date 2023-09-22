@@ -8,6 +8,14 @@ import { Router } from '@angular/router';
 })
 export class KisiIslemleriComponent {
 
+  allowNumericDigitsOnlyOnKeyUp(e) {		
+    const charCode = e.which ? e.which : e.keyCode;
+    
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      e.preventDefault();
+    }
+  }
+
   @Input() tip: string = "";
   
   [x: string]: any;

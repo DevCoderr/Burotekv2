@@ -8,6 +8,14 @@ import { RadioButtonModule } from 'primeng/radiobutton';
   styleUrls: ['./yeni-tahsilat.component.scss']
 })
 export class YeniTahsilatComponent {
+
+  allowNumericDigitsOnlyOnKeyUp(e) {		
+    const charCode = e.which ? e.which : e.keyCode;
+    
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      e.preventDefault();
+    }
+  }
   formGroup: FormGroup | undefined;
 
   ngOnInit() {

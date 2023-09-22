@@ -4,7 +4,7 @@
         <div class="field col-12 md:col-6">
             <label for="state">Talep Durumu</label>
             <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
-                <option>Arizona</option>
+                <option>Lütfen Seçiniz</option>
                 <option>California</option>
                 <option>Florida</option>
                 <option>Ohio</option>
@@ -18,7 +18,7 @@
         <div class="field col-12 md:col-6">
             <label for="state">Talep Türü</label>
             <select id="state" class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary" style="appearance: auto">
-                <option>Arizona</option>
+                <option>Hepsi</option>
                 <option>California</option>
                 <option>Florida</option>
                 <option>Ohio</option>
@@ -29,11 +29,18 @@
             <label for="city">Talep Konusu</label>
             <input id="city" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
         </div>
-        <div class="field col-12 md:col-6">
-            <label for="city">Tarihi Aralığı:</label>
-            <input id="city" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        <div class="field col">
+            <label for="lastname3">Tarih Aralığı</label>
+            <div class="text-base text-color surface-overlay appearance-none outline-none focus:border-primary w-full">
+               <div style="height: 30px;">
+                <p-calendar  
+                [style]="{'width': '20%','display': 'inline-flex','height':'34px'}"[(ngModel)]="date1"dateFormat="dd.mm.yy" ></p-calendar>/<p-calendar  
+                [style]="{'width': '20%','display': 'inline-flex','height':'34px'}"[(ngModel)]="date2"dateFormat="dd.mm.yy"></p-calendar>
+            </div>
+            </div>
         </div>
     </div>
+    <p></p>
     <div>
         <p-button label="Sorgula" styleClass="p-button-rounded p-button-success pi pi-search"></p-button>
         <p-button label="Yeni Kayıt" styleClass="p-button-rounded pi pi-plus"></p-button>

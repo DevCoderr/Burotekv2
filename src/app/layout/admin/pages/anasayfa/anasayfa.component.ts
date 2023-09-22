@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CalendarOptions } from '@fullcalendar/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
 @Component({
   selector: 'app-anasayfa',
@@ -7,6 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./anasayfa.component.css']
 })
 export class AnasayfaComponent {
+  calendarOptions: CalendarOptions = {
+    initialView: 'dayGridMonth',
+    plugins: [dayGridPlugin]
+  };
   constructor(private router: Router) {}
   isMenuOpen: boolean = false; 
 
