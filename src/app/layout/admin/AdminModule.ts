@@ -62,7 +62,6 @@ import { YapilacakIslerListesiComponent } from './pages/notlar/yapilacak-isler-l
 import { YeniEvrakComponent } from './pages/evrak/yeni-evrak/yeni-evrak.component';
 import { EvrakComponent } from './pages/evrak/evrak.component';
 import { EvrakIslemleriComponent } from './pages/evrak/evrak-islemleri/evrak-islemleri.component';
-import { BelgeTuruIslemleriComponent } from './pages/evrak/belge-turu-islemleri/belge-turu-islemleri.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 
 
@@ -80,7 +79,6 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     KisiIslemleriComponent,
     DavaComponent,
     EvrakIslemleriComponent,
-    BelgeTuruIslemleriComponent,
     IcraComponent,
     KisiListesiComponent,
     CariIslemlerComponent,

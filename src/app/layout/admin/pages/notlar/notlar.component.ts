@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CalendarModule } from 'primeng/calendar';
+import { DataService } from 'src/data.service';
 
 @Component({
   selector: 'app-notlar',
@@ -8,4 +9,9 @@ import { CalendarModule } from 'primeng/calendar';
 })
 export class NotlarComponent {
 
+  constructor(private dataService: DataService){
+
+  }
+
+ 
 }

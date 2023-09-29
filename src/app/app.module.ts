@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrimengModule } from './layout/shared/modules/primeng.module';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
         CommonModule,
         NgbModule,
         PrimengModule,
-        FullCalendarModule
+        FullCalendarModule,
+        HttpClientModule
         
     ],
     providers: [

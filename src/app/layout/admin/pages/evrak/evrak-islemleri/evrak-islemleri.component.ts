@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Calendar } from '@fullcalendar/core';
+import { DataService } from 'src/data.service';
 
 @Component({
   selector: 'app-evrak-islemleri',
@@ -9,6 +10,28 @@ import { Calendar } from '@fullcalendar/core';
   styleUrls: ['./evrak-islemleri.component.scss']
 })
 export class EvrakIslemleriComponent {
+  
+  formGroup: FormGroup | undefined;
+  evrakList: any[]
+
+  ngOnInit() {
+      debugger;
+      this.formGroup = new FormGroup({
+          pasif: new FormControl<boolean | null>(null),
+      });
+
+this.evrakService.get("Evrak").subscribe(
+          (data) => {
+            console.log(data);
+            this.evrakList = data;
+            // Verileri işleme kodu buraya yazın
+          },
+          (error) => {
+            // Hata yönetimi buraya yazın
+          }
+        );
+  }
+
 
   allowNumericDigitsOnlyOnKeyUp(e) {		
     const charCode = e.which ? e.which : e.keyCode;
@@ -21,8 +44,8 @@ export class EvrakIslemleriComponent {
   date1: Date | undefined;
   date2: Date | undefined;
 
-  [x: string]: any;
-  constructor(private router: Router) {}
+
+  constructor(private router: Router, private evrakService: DataService) {}
   isMenuOpen: boolean = false; 
 
   onSubmit(): void {

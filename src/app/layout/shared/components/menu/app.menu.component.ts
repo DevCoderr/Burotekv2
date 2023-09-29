@@ -95,10 +95,6 @@ export class AppMenuComponent implements OnInit {
                             label: 'Kurum İşlemleri',
                             routerLink: ['kurum-islemleri']
                         },
-                        {
-                            label: 'Belge Türü İşlemleri',
-                            routerLink: ['belge-türü-islemleri']
-                        }
                     ]},
                 ]
             },

@@ -46,7 +46,7 @@ import { TaleplerComponent } from './pages/iletisim/talepler/talepler.component'
 import { IletisimBilgileriComponent } from './pages/iletisim/iletisim-bilgileri/iletisim-bilgileri.component';
 import { SikcaSorulanSorularComponent } from './pages/iletisim/sikca-sorulan-sorular/sikca-sorulan-sorular.component';
 import { BuroIslemleriComponent } from './pages/yonetim-paneli/buro-islemleri/buro-islemleri.component';
-import { BelgeTuruIslemleriComponent } from './pages/evrak/belge-turu-islemleri/belge-turu-islemleri.component';
+
 
 
 const routes: Routes = [
@@ -158,15 +158,6 @@ const routes: Routes = [
                     title:'Evrak İşlemleri',
                     breadcrumb:'Evrak İşlemleri',
                     link:'admin/evrak-islemleri' 
-                }
-            },
-            {
-                 path: 'belge-turu-islemleri',
-                 component: BelgeTuruIslemleriComponent ,
-                 data:{
-                     title:'Belge Türü İşlemleri',
-                     breadcrumb:'Belge Türü İşlemleri',
-                     link:'admin/belge-turu-islemleri' 
                 }
             },
             {
